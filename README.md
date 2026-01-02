@@ -1,17 +1,167 @@
-# React + Vite
+🚀 Portfolio & Achievements Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio & achievement showcase built using React.js and Tailwind CSS.
+This project highlights my projects, internships, certifications, and national-level achievements with a clean, professional UI.
 
-Currently, two official plugins are available:
+📌 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This portfolio website is designed to present my technical journey and achievements in a structured and visually appealing way.
+It includes:
 
-## React Compiler
+🧑‍💻 Projects showcase
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🏆 Internship achievements
 
-## Expanding the ESLint configuration
+📜 Certifications
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Portfolio_v1
+🏅 National-level competitions (GOER 2025, RMAT, etc.)
+
+The UI is inspired by modern SaaS dashboards with dark theme, cards, and smooth layouts.
+
+✨ Key Features
+
+⚛️ Built with React.js
+
+🎨 Styled using Tailwind CSS
+
+🌙 Dark theme professional UI
+
+📱 Fully responsive (Mobile, Tablet, Desktop)
+
+🏆 Dedicated Achievement Pages
+
+📜 Certificate & Internship details
+
+🔗 External links (GitHub, Live Projects, Certificates)
+
+🧩 Reusable components
+
+🚫 Inspect disable hook (basic protection)
+
+🏗️ Tech Stack
+Technology Usage
+React.js Frontend framework
+Tailwind CSS Styling & UI
+Lucide React Icons
+JavaScript (ES6+) Logic
+HTML5 Structure
+CSS3 Styling
+📂 Project Structure
+src/
+│── components/
+│ ├── Navbar.jsx
+│ ├── Footer.jsx
+│ ├── Layout.jsx
+│
+│── pages/
+│ ├── Projects.jsx
+│ ├── ProjectDetail.jsx
+│ ├── Certificates.jsx
+│ ├── InternshipAchievement.jsx
+│ ├── GOERAchievement.jsx
+│
+│── data/
+│ ├── projects.js
+│ ├── certificates.js
+│
+│── hooks/
+│ └── useDisableInspect.js
+│
+│── App.jsx
+│── main.jsx
+
+🏆 Major Achievements Highlighted
+🎯 GOER 2025 – National Level Competition
+
+Selected among Top 10 Universities in India
+
+Organized by Institute of Risk Management (IRM), India
+
+Final round held at SDA Bocconi Asia Center, Mumbai
+
+Team: Intrepid Explorers (MCA) – AKS University, Satna
+
+📊 RMAT – Risk Management Aptitude Test
+
+Score: 96% (240 / 250)
+
+Skills assessed:
+
+Business Logic
+
+Analytical Reasoning
+
+Decision Making
+
+Risk Thinking
+
+🧑‍💼 Internship Experience
+
+Software Development Intern – AKS University, Satna
+
+Automated academic workflows
+
+Improved system efficiency
+
+Created documentation
+
+Worked with modern tech stack
+
+Mentored & collaborated in a team environment
+
+📜 Certifications Section
+
+AWS Training (Anudip Foundation)
+
+Core Java Certification
+
+IBM / Microsoft / Forage Programs
+
+RMAT & GOER Participation Certificates
+
+Internship & Appreciation Certificates
+
+All certificates are displayed in a structured card-based UI.
+
+▶️ How to Run the Project Locally
+
+# Clone repository
+
+git clone https://github.com/your-username/your-portfolio.git
+
+# Go to project directory
+
+cd your-portfolio
+
+# Install dependencies
+
+npm install
+
+# Start development server
+
+npm run dev
+
+🌐 Live Demo
+
+🔗 Live Portfolio:
+(Add your deployed link here – Vercel / Netlify)
+
+📈 Future Improvements
+
+🖼️ Certificate image slider
+
+📊 Timeline-based achievements
+
+🧾 Downloadable resume section
+
+🔍 Advanced filters for projects
+
+🌐 SEO optimization
+
+🤝 Connect With Me
+
+GitHub: https://github.com/15shivamgit
+
+LinkedIn: (Add your LinkedIn URL)
+
+Portfolio: (Live URL)
