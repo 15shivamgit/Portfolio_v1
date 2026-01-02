@@ -3,6 +3,7 @@
 A modern, responsive personal portfolio & achievement showcase built using React.js and Tailwind CSS.
 This project highlights my projects, internships, certifications, and national-level achievements with a clean, professional UI.
 
+
 📌 Project Overview
 
 This portfolio website is designed to present my technical journey and achievements in a structured and visually appealing way.
@@ -17,6 +18,9 @@ It includes:
 🏅 National-level competitions (GOER 2025, RMAT, etc.)
 
 The UI is inspired by modern SaaS dashboards with dark theme, cards, and smooth layouts.
+
+
+
 
 ✨ Key Features
 
@@ -38,37 +42,51 @@ The UI is inspired by modern SaaS dashboards with dark theme, cards, and smooth 
 
 🚫 Inspect disable hook (basic protection)
 
+
+
+
+
 🏗️ Tech Stack
-Technology Usage
-React.js Frontend framework
-Tailwind CSS Styling & UI
-Lucide React Icons
-JavaScript (ES6+) Logic
-HTML5 Structure
-CSS3 Styling
+| Technology            | Usage              |
+| --------------------- | ------------------ |
+| **React.js**          | Frontend framework |
+| **Tailwind CSS**      | Styling & UI       |
+| **Lucide React**      | Icons              |
+| **JavaScript (ES6+)** | Logic              |
+| **HTML5**             | Structure          |
+| **CSS3**              | Styling            |
+
+
+
+
 📂 Project Structure
 src/
 │── components/
-│ ├── Navbar.jsx
-│ ├── Footer.jsx
-│ ├── Layout.jsx
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│   ├── Layout.jsx
 │
 │── pages/
-│ ├── Projects.jsx
-│ ├── ProjectDetail.jsx
-│ ├── Certificates.jsx
-│ ├── InternshipAchievement.jsx
-│ ├── GOERAchievement.jsx
+│   ├── Projects.jsx
+│   ├── ProjectDetail.jsx
+│   ├── Certificates.jsx
+│   ├── InternshipAchievement.jsx
+│   ├── GOERAchievement.jsx
 │
 │── data/
-│ ├── projects.js
-│ ├── certificates.js
+│   ├── projects.js
+│   ├── certificates.js
 │
 │── hooks/
-│ └── useDisableInspect.js
+│   └── useDisableInspect.js
 │
 │── App.jsx
 │── main.jsx
+
+
+
+
+
 
 🏆 Major Achievements Highlighted
 🎯 GOER 2025 – National Level Competition
@@ -80,6 +98,8 @@ Organized by Institute of Risk Management (IRM), India
 Final round held at SDA Bocconi Asia Center, Mumbai
 
 Team: Intrepid Explorers (MCA) – AKS University, Satna
+
+
 
 📊 RMAT – Risk Management Aptitude Test
 
@@ -95,6 +115,8 @@ Decision Making
 
 Risk Thinking
 
+
+
 🧑‍💼 Internship Experience
 
 Software Development Intern – AKS University, Satna
@@ -108,6 +130,8 @@ Created documentation
 Worked with modern tech stack
 
 Mentored & collaborated in a team environment
+
+
 
 📜 Certifications Section
 
@@ -123,28 +147,28 @@ Internship & Appreciation Certificates
 
 All certificates are displayed in a structured card-based UI.
 
+
+
 ▶️ How to Run the Project Locally
 
 # Clone repository
-
 git clone https://github.com/your-username/your-portfolio.git
 
 # Go to project directory
-
 cd your-portfolio
 
 # Install dependencies
-
 npm install
 
 # Start development server
-
 npm run dev
+
+
 
 🌐 Live Demo
 
-🔗 Live Portfolio:
-(Add your deployed link here – Vercel / Netlify)
+🔗 Live Portfolio:  https://portfolio-v1-8gktb982s-15shivamgits-projects.vercel.app/
+
 
 📈 Future Improvements
 
@@ -162,6 +186,6 @@ npm run dev
 
 GitHub: https://github.com/15shivamgit
 
-LinkedIn: (Add your LinkedIn URL)
+LinkedIn: (https://www.linkedin.com/in/15shivambgs/)
 
-Portfolio: (Live URL)
+Portfolio: (https://portfolio-v1-8gktb982s-15shivamgits-projects.vercel.app/)
