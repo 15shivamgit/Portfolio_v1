@@ -96,9 +96,9 @@ export default function Contact() {
                         Location
                       </h3>
                       <p className="text-gray-600 dark:text-gray-300">
-                        Ramdiri-III, Begusarai (Bihar)
+                        Ramdiri-III,Begusarai,Bihar,
                         <br />
-                        District: Begusarai (Bihar)
+                        851129
                       </p>
                     </div>
                   </div>
