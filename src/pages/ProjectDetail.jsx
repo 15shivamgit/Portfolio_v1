@@ -252,16 +252,16 @@ const projectsData = {
     description: "Interactive Power BI dashboard for IPL data analysis.",
     fullDescription:
       "This project is an interactive Power BI dashboard built to analyze IPL (Indian Premier League) data. It provides insights such as player performance, team statistics, match outcomes, and season trends. The dashboard uses filters, slicers, and visualizations to help users explore cricket data efficiently.",
-    image: "/project-img/ipl-dashboard.png",
+    image: "/ipl_dash.png",
     placeholderImage:
       "https://placehold.co/800x400/F59E0B/FFFFFF?text=IPL+Dashboard",
-    technologies: ["Power BI", "DAX", "Data Modeling", "Excel"],
+    technologies: ["Power BI", "DAX", "Data Modeling", "Excel","Python","NUmpy","Pandas","Matplotlib", "Jupyter"],
     category: "data",
     status: "completed",
-    githubUrl: null,
+    githubUrl: "https://github.com/15shivamgit/Data-Analysis.git",
     liveUrl:
       "https://app.powerbi.com/view?r=eyJrIjoiZTdjYThjZGMtMjYxMS00ZTFjLWFkYzYtYjVlZDg5NTE5NDE3IiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9",
-    year: "2025",
+    year: "2026",
     team: "Solo",
     duration: "2-3 weeks",
     features: [
@@ -285,26 +285,26 @@ const projectsData = {
 
   10: {
     id: 10,
-    title: "Sales Performance Dashboard",
-    description: "Business sales analytics dashboard using Power BI.",
+    title: "IPL Performance Dashboard",
+    description: "IPL data analytics dashboard using Power BI.",
     fullDescription:
-      "This project is a Power BI dashboard designed to analyze business sales data. It helps track KPIs such as revenue, profit, and sales growth. The dashboard includes interactive charts and filters to explore sales performance across regions, products, and time periods.",
-    image: "/project-img/sales-dashboard.png",
+      "This project is a Power BI dashboard designed to analyze IPL data. It helps track KPIs such as Batter, Bowler and indivisual team performance. The dashboard includes interactive charts and filters to explore ipl performance across saeson, team, venue.",
+    image: "/ipl_dash2.png",
     placeholderImage:
       "https://placehold.co/800x400/10B981/FFFFFF?text=Sales+Dashboard",
-    technologies: ["Power BI", "DAX", "Data Analysis", "Excel"],
+    technologies: ["Power BI", "DAX", "Data Analysis", "Excel", "Jupyter"],
     category: "data",
     status: "completed",
-    githubUrl: null,
+    githubUrl: "https://github.com/15shivamgit/Data-Analysis.git",
     liveUrl:
       "https://app.powerbi.com/view?r=eyJrIjoiNjU0NTg5YTMtNzRmNi00N2NhLWI2OTktN2VjZWM3YTQyMzFmIiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9",
-    year: "2025",
+    year: "2026",
     team: "Solo",
     duration: "2 weeks",
     features: [
       "Sales KPIs tracking",
-      "Region-wise performance analysis",
-      "Product category insights",
+      "Team performance analysis",
+      "Saeson category insights",
       "Interactive charts and filters",
     ],
     challenges: [

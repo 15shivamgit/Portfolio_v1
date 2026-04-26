@@ -63,7 +63,7 @@ export default function About() {
     },
     {
       category: "Tools",
-      skills: ["GitHub", "VS Code", "EXCEL"],
+      skills: ["GitHub", "VS Code", "EXCEL", "Power BI", "Jupyter"],
       icon: Terminal,
       color: "from-yellow-500 to-orange-500",
     },

@@ -53,7 +53,7 @@ export default function Home() {
 
   const handleResumeDownload = () => {
     const link = document.createElement("a");
-    link.href = "/shivam_resume.pdf";
+    link.href = "/shivam_resume_analysis.pdf";
     link.download = "Shivam_Kumar_Resume.pdf";
     link.click();
   };
