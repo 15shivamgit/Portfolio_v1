@@ -290,7 +290,8 @@ const projectsData = {
       "DAX formulas and measures",
       "Data visualization best practices",
     ],
-    DemoUrl: "https://app.fabric.microsoft.com/view?r=eyJrIjoiZTdjYThjZGMtMjYxMS00ZTFjLWFkYzYtYjVlZDg5NTE5NDE3IiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9",
+    DemoUrl:
+      "https://app.fabric.microsoft.com/view?r=eyJrIjoiZTdjYThjZGMtMjYxMS00ZTFjLWFkYzYtYjVlZDg5NTE5NDE3IiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9",
     icon: Database,
   },
 
@@ -328,7 +329,8 @@ const projectsData = {
       "Dashboard storytelling",
       "Advanced Power BI visualization",
     ],
-    DemoUrl: "https://app.fabric.microsoft.com/view?r=eyJrIjoiNjU0NTg5YTMtNzRmNi00N2NhLWI2OTktN2VjZWM3YTQyMzFmIiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9",
+    DemoUrl:
+      "https://app.fabric.microsoft.com/view?r=eyJrIjoiNjU0NTg5YTMtNzRmNi00N2NhLWI2OTktN2VjZWM3YTQyMzFmIiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9",
     icon: Database,
   },
 };
@@ -586,7 +588,8 @@ export default function ProjectDetail() {
                     ))}
                   </ul>
 
-                  <div>
+                  {/* add iframe tag */}
+                  <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-6">
                     <iframe
                       title="Data Analysis"
                       width="600"
@@ -595,6 +598,9 @@ export default function ProjectDetail() {
                       frameborder="0"
                       allowFullScreen="true"
                     ></iframe>
+
+
+
                   </div>
                 </div>
               </div>
