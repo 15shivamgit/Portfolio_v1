@@ -39,7 +39,7 @@ export default function Projects() {
       githubUrl: "https://github.com/15shivamgit/Apna-Resturernt",
       linkUrl: "https://apna-resturernt.vercel.app/",
       year: "2024",
-      team: "Solo",
+      team: "Team Project",
       icon: School,
       fallbackColor: "from-pink-500 to-cyan-500",
     },
