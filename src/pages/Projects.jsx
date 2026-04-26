@@ -157,6 +157,39 @@ export default function Projects() {
       icon: Database,
       fallbackColor: "from-indigo-500 to-red-500",
     },
+    {
+      id: 9,
+      title: "IPL Data Analysis Dashboard",
+      description: "Interactive Power BI dashboard for IPL data insights.",
+      image: "/project-img/ipl-dashboard.png",
+      technologies: ["Power BI", "DAX", "Data Modeling", "Excel"],
+      category: "data",
+      status: "completed",
+      githubUrl: null,
+      linkUrl:
+        "https://app.powerbi.com/view?r=eyJrIjoiZTdjYThjZGMtMjYxMS00ZTFjLWFkYzYtYjVlZDg5NTE5NDE3IiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9",
+      year: "2025",
+      team: "Solo",
+      icon: Database,
+      fallbackColor: "from-yellow-500 to-orange-500",
+    },
+
+    {
+      id: 10,
+      title: "Sales Performance Dashboard",
+      description: "Business sales analytics dashboard using Power BI.",
+      image: "/project-img/sales-dashboard.png",
+      technologies: ["Power BI", "DAX", "Data Analysis", "Excel"],
+      category: "data",
+      status: "completed",
+      githubUrl: null,
+      linkUrl:
+        "https://app.powerbi.com/view?r=eyJrIjoiNjU0NTg5YTMtNzRmNi00N2NhLWI2OTktN2VjZWM3YTQyMzFmIiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9",
+      year: "2025",
+      team: "Solo",
+      icon: Database,
+      fallbackColor: "from-green-500 to-emerald-500",
+    },
   ];
 
   const categories = [
@@ -168,9 +201,11 @@ export default function Projects() {
   ];
 
   const statusColors = {
-    completed: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
-    'in-progress': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200',
-    planned: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
+    completed:
+      "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+    "in-progress":
+      "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
+    planned: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
   };
 
   const filteredProjects = projects.filter((p) => {

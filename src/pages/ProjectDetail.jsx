@@ -118,7 +118,7 @@ const projectsData = {
     icon: Brain,
   },
 
-    5: {
+  5: {
     id: 5,
     title: "BhaktiYatra",
     description: "MERN stack pilgrimage travel booking platform.",
@@ -127,13 +127,7 @@ const projectsData = {
     image: "/bhakti2.png",
     placeholderImage:
       "https://placehold.co/800x400/F97316/FFFFFF?text=BhaktiYatra",
-    technologies: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "MongoDB Atlas",
-      "JWT",
-    ],
+    technologies: ["React", "Node.js", "Express.js", "MongoDB Atlas", "JWT"],
     category: "mern",
     status: "in-progress",
     githubUrl: "https://github.com/15shivamgit/BhaktiYatra2",
@@ -186,10 +180,7 @@ const projectsData = {
       "Reusable components",
       "Tailwind CSS styling",
     ],
-    challenges: [
-      "UI consistency",
-      "Responsive design across devices",
-    ],
+    challenges: ["UI consistency", "Responsive design across devices"],
     learnings: [
       "Tailwind CSS mastery",
       "Component-based UI design",
@@ -210,8 +201,7 @@ const projectsData = {
     technologies: ["Tailwind CSS", "Python", "Django"],
     category: "data",
     status: "in-progress",
-    githubUrl:
-      "https://github.com/15shivamgit/LMS-Student--Module-Backend-",
+    githubUrl: "https://github.com/15shivamgit/LMS-Student--Module-Backend-",
     liveUrl: "https://lms-student-module-frontend.vercel.app/",
     year: "2025",
     team: "Team Project",
@@ -221,14 +211,8 @@ const projectsData = {
       "Course tracking",
       "Clean and responsive UI",
     ],
-    challenges: [
-      "Backend connectivity",
-      "Team coordination",
-    ],
-    learnings: [
-      "Team collaboration",
-      "Frontend-backend integration",
-    ],
+    challenges: ["Backend connectivity", "Team coordination"],
+    learnings: ["Team collaboration", "Frontend-backend integration"],
     icon: Database,
   },
 
@@ -254,10 +238,7 @@ const projectsData = {
       "Trend analysis",
       "Cleaned and structured datasets",
     ],
-    challenges: [
-      "Handling large datasets",
-      "Data preprocessing",
-    ],
+    challenges: ["Handling large datasets", "Data preprocessing"],
     learnings: [
       "Data analysis techniques",
       "Visualization using Matplotlib",
@@ -265,9 +246,79 @@ const projectsData = {
     ],
     icon: Database,
   },
+  9: {
+    id: 9,
+    title: "IPL Data Analysis Dashboard",
+    description: "Interactive Power BI dashboard for IPL data analysis.",
+    fullDescription:
+      "This project is an interactive Power BI dashboard built to analyze IPL (Indian Premier League) data. It provides insights such as player performance, team statistics, match outcomes, and season trends. The dashboard uses filters, slicers, and visualizations to help users explore cricket data efficiently.",
+    image: "/project-img/ipl-dashboard.png",
+    placeholderImage:
+      "https://placehold.co/800x400/F59E0B/FFFFFF?text=IPL+Dashboard",
+    technologies: ["Power BI", "DAX", "Data Modeling", "Excel"],
+    category: "data",
+    status: "completed",
+    githubUrl: null,
+    liveUrl:
+      "https://app.powerbi.com/view?r=eyJrIjoiZTdjYThjZGMtMjYxMS00ZTFjLWFkYzYtYjVlZDg5NTE5NDE3IiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9",
+    year: "2025",
+    team: "Solo",
+    duration: "2-3 weeks",
+    features: [
+      "Player performance analysis",
+      "Team-wise statistics",
+      "Interactive filters and slicers",
+      "Match result insights",
+    ],
+    challenges: [
+      "Handling large cricket dataset",
+      "Creating optimized DAX measures",
+      "Designing interactive visuals",
+    ],
+    learnings: [
+      "Power BI dashboard design",
+      "DAX formulas and measures",
+      "Data visualization best practices",
+    ],
+    icon: Database,
+  },
 
-
-
+  10: {
+    id: 10,
+    title: "Sales Performance Dashboard",
+    description: "Business sales analytics dashboard using Power BI.",
+    fullDescription:
+      "This project is a Power BI dashboard designed to analyze business sales data. It helps track KPIs such as revenue, profit, and sales growth. The dashboard includes interactive charts and filters to explore sales performance across regions, products, and time periods.",
+    image: "/project-img/sales-dashboard.png",
+    placeholderImage:
+      "https://placehold.co/800x400/10B981/FFFFFF?text=Sales+Dashboard",
+    technologies: ["Power BI", "DAX", "Data Analysis", "Excel"],
+    category: "data",
+    status: "completed",
+    githubUrl: null,
+    liveUrl:
+      "https://app.powerbi.com/view?r=eyJrIjoiNjU0NTg5YTMtNzRmNi00N2NhLWI2OTktN2VjZWM3YTQyMzFmIiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9",
+    year: "2025",
+    team: "Solo",
+    duration: "2 weeks",
+    features: [
+      "Sales KPIs tracking",
+      "Region-wise performance analysis",
+      "Product category insights",
+      "Interactive charts and filters",
+    ],
+    challenges: [
+      "Data cleaning and transformation",
+      "Building efficient data models",
+      "Creating meaningful visual insights",
+    ],
+    learnings: [
+      "Business data analysis",
+      "Dashboard storytelling",
+      "Advanced Power BI visualization",
+    ],
+    icon: Database,
+  },
 };
 
 /* ================= COMPONENT ================= */
@@ -356,8 +407,8 @@ export default function ProjectDetail() {
                     project.status === "completed"
                       ? "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
                       : project.status === "in-progress"
-                      ? "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200"
-                      : "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+                        ? "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200"
+                        : "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
                   }`}
                 >
                   {project.status.replace("-", " ")}
