@@ -255,7 +255,17 @@ const projectsData = {
     image: "/ipl_dash.png",
     placeholderImage:
       "https://placehold.co/800x400/F59E0B/FFFFFF?text=IPL+Dashboard",
-    technologies: ["Power BI", "DAX", "Data Modeling", "Excel","Python","NUmpy","Pandas","Matplotlib", "Jupyter"],
+    technologies: [
+      "Power BI",
+      "DAX",
+      "Data Modeling",
+      "Excel",
+      "Python",
+      "NUmpy",
+      "Pandas",
+      "Matplotlib",
+      "Jupyter",
+    ],
     category: "data",
     status: "completed",
     githubUrl: "https://github.com/15shivamgit/Data-Analysis.git",
@@ -280,6 +290,18 @@ const projectsData = {
       "DAX formulas and measures",
       "Data visualization best practices",
     ],
+    Demo: (
+      <div>
+        <iframe
+          title="analysis"
+          width="600"
+          height="373.5"
+          src="https://app.fabric.microsoft.com/view?r=eyJrIjoiZTdjYThjZGMtMjYxMS00ZTFjLWFkYzYtYjVlZDg5NTE5NDE3IiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9"
+          frameborder="0"
+          allowFullScreen="true"
+        ></iframe>
+      </div>
+    ),
     icon: Database,
   },
 
@@ -313,10 +335,22 @@ const projectsData = {
       "Creating meaningful visual insights",
     ],
     learnings: [
-      "Business data analysis",
+      "Cricket data analysis",
       "Dashboard storytelling",
       "Advanced Power BI visualization",
     ],
+    Demo: (
+      <div>
+        <iframe
+          title="shanti_info"
+          width="600"
+          height="373.5"
+          src="https://app.fabric.microsoft.com/view?r=eyJrIjoiNjU0NTg5YTMtNzRmNi00N2NhLWI2OTktN2VjZWM3YTQyMzFmIiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9"
+          frameborder="0"
+          allowFullScreen="true"
+        ></iframe>
+      </div>
+    ),
     icon: Database,
   },
 };
