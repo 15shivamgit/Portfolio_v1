@@ -594,6 +594,7 @@ export default function ProjectDetail() {
         </div>
 
         {/* add iframe tag */}
+        {/*
         <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-6">
           <iframe
             title="Data Analysis"
@@ -603,6 +604,7 @@ export default function ProjectDetail() {
             frameborder="0"
             allowFullScreen="true"
           ></iframe>
+          */}
 
           {/* Navigation to other projects */}
           <div className="text-center">
