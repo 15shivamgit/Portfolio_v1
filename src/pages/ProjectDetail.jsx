@@ -199,7 +199,7 @@ const projectsData = {
     placeholderImage:
       "https://placehold.co/800x400/6366F1/FFFFFF?text=LMS+Student+Module",
     technologies: ["Tailwind CSS", "Python", "Django"],
-    category: "data",
+    category: "web",
     status: "in-progress",
     githubUrl: "https://github.com/15shivamgit/LMS-Student--Module-Backend-",
     liveUrl: "https://lms-student-module-frontend.vercel.app/",
@@ -216,36 +216,6 @@ const projectsData = {
     icon: Database,
   },
 
-  8: {
-    id: 8,
-    title: "Air Quality Analysis",
-    description: "Data analytics and visualization project.",
-    fullDescription:
-      "Air Quality Analysis project focuses on analyzing air pollution data using Python libraries. The project involves cleaning datasets, visualizing trends, and deriving insights to understand air quality patterns.",
-    image: "/project-img/data-dashboard.png",
-    placeholderImage:
-      "https://placehold.co/800x400/EF4444/FFFFFF?text=Air+Quality+Analysis",
-    technologies: ["Python", "NumPy", "Pandas", "Matplotlib"],
-    category: "ai",
-    status: "in-progress",
-    githubUrl: null,
-    liveUrl: null,
-    year: "2025",
-    team: "Team Project",
-    duration: "Ongoing",
-    features: [
-      "Data visualization",
-      "Trend analysis",
-      "Cleaned and structured datasets",
-    ],
-    challenges: ["Handling large datasets", "Data preprocessing"],
-    learnings: [
-      "Data analysis techniques",
-      "Visualization using Matplotlib",
-      "Working with real-world datasets",
-    ],
-    icon: Database,
-  },
   9: {
     id: 9,
     title: "IPL Data Analysis Dashboard",
@@ -268,7 +238,7 @@ const projectsData = {
     ],
     category: "data",
     status: "completed",
-    githubUrl: "https://github.com/15shivamgit/Data-Analysis.git",
+    githubUrl: "https://github.com/15shivamgit/IPL_Dashboard.git",
     liveUrl:
       "https://app.powerbi.com/view?r=eyJrIjoiZTdjYThjZGMtMjYxMS00ZTFjLWFkYzYtYjVlZDg5NTE5NDE3IiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9",
     year: "2026",
@@ -300,14 +270,14 @@ const projectsData = {
     title: "IPL Performance Dashboard",
     description: "IPL data analytics dashboard using Power BI.",
     fullDescription:
-      "This project is a Power BI dashboard designed to analyze IPL data. It helps track KPIs such as Batter, Bowler and indivisual team performance. The dashboard includes interactive charts and filters to explore ipl performance across saeson, team, venue.",
+      "This project is a Power BI dashboard designed to analyze IPL data. It helps track KPIs such as Batter, Bowler and indivisual team performance. The dashboard includes interactive charts and filters to explore ipl performance across season, team, venue.",
     image: "/ipl_dash2.png",
     placeholderImage:
       "https://placehold.co/800x400/10B981/FFFFFF?text=Sales+Dashboard",
     technologies: ["Power BI", "DAX", "Data Analysis", "Excel", "Jupyter"],
     category: "data",
     status: "completed",
-    githubUrl: "https://github.com/15shivamgit/Data-Analysis.git",
+    githubUrl: "https://github.com/15shivamgit/IPL_Dashboard.git",
     liveUrl:
       "https://app.powerbi.com/view?r=eyJrIjoiNjU0NTg5YTMtNzRmNi00N2NhLWI2OTktN2VjZWM3YTQyMzFmIiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9",
     year: "2026",
@@ -316,7 +286,7 @@ const projectsData = {
     features: [
       "Sales KPIs tracking",
       "Team performance analysis",
-      "Saeson category insights",
+      "Season category insights",
       "Interactive charts and filters",
     ],
     challenges: [
@@ -617,7 +587,6 @@ export default function ProjectDetail() {
             </NavLink>
           </div>
         </div>
-      </div>
 
       <Footer />
     </>

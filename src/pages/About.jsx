@@ -39,7 +39,7 @@ export default function About() {
     },
     {
       category: "Web Development",
-      skills: ["HTML", "CSS", "Tailwind","JavaScript",],
+      skills: ["HTML", "CSS", "Tailwind","JavaScript","React"],
       icon: Globe,
       color: "from-green-500 to-emerald-500",
     },
@@ -51,13 +51,13 @@ export default function About() {
     },
     {
       category: "Data Analytics",
-      skills: ["NumPy", "Pandas", "Matplotlib"],
+      skills: ["NumPy", "Pandas", "Matplotlib","PowerBI"],
       icon: BarChart3,
       color: "from-purple-500 to-pink-500",
     },
     {
       category: "Framework/Library",
-      skills: ["Tailwindd/Boostrap", "React"],
+      skills: ["Tailwindd/Boostrap", "React","Gjango"],
       icon: Library,
       color: "from-purple-500 to-pink-500",
     },
@@ -78,11 +78,11 @@ export default function About() {
 
   const education = [
     {
-      degree: "MCA (Pursuing)",
-      institution: "AKS University, MP",
+      degree: "MCA",
+      institution: "AKS University, Satna(MP)",
       year: "2024 - Present",
-      status: "Current",
-      grade: "--",
+      status: "Completed",
+      grade: "8.82 CGPA",
       icon: GraduationCap,
     },
     {
@@ -98,7 +98,7 @@ export default function About() {
       institution: "G.D College, Begusarai",
       year: "2017 - 2019",
       status: "Completed",
-      grade: "56%",
+      grade: "56.8%",
       icon: School,
     },
     {
@@ -106,7 +106,7 @@ export default function About() {
       institution: "R high School, Ramdiri",
       year: "2017",
       status: "Completed",
-      grade: "74%",
+      grade: "74.4%",
       icon: School,
     },
   ];
