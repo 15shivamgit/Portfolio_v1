@@ -80,7 +80,7 @@ export default function About() {
     {
       degree: "MCA",
       institution: "AKS University, Satna(MP)",
-      year: "2024 - Present",
+      year: "2024 - 2026",
       status: "Completed",
       grade: "8.82 CGPA",
       icon: GraduationCap,

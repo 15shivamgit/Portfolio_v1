@@ -37,10 +37,14 @@ export default function Contact() {
 
     try {
       // 🔴 Replace with Formspree / EmailJS endpoint
-      const response = await fetch("https://formspree.io/f/xxxxxxx", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+      const response = await fetch(
+        "http://localhost:5000/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
       });
 
       if (response.ok) {
