@@ -70,10 +70,10 @@ export default function About() {
   ];
 
   const currentlyLearning = [
-    { name: "Machine Learning", progress: 40, icon: Cpu },
+    { name: "Data Science", progress: 75, icon: Computer },
     { name: "MERN-Stack Developer", progress: 50, icon: Server },
     { name: "Git & GitHub", progress: 75, icon: GitBranch },
-    { name: "Data Science", progress: 75, icon: Computer },
+    { name: "AL / ML", progress: 40, icon: Cpu },
   ];
 
   const education = [

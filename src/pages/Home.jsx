@@ -11,6 +11,8 @@ import {
   Calendar,
   Users,
   Target,
+  Instagram,
+  Twitter,
 } from "lucide-react";
 import Footer from "../components/Footer";
 import useDisableInspect from "../hooks/useDisableInspect";
@@ -40,14 +42,14 @@ export default function Home() {
       link: "mailto:15shivambgs@gmail.com",
     },
     {
-      icon: Linkedin,
+      icon: Instagram,
       text: "Shivam Kumar",
-      link: "https://www.linkedin.com/in/15shivambgs",
+      link: "https://www.instagram.com/15shivambgs",
     },
     {
-      icon: Github,
+      icon: Twitter,
       text: "Shivam Kumar",
-      link: "https://github.com/15shivamgit",
+      link: "https://x.com/Shivam748888",
     },
   ];
 
@@ -116,13 +118,13 @@ export default function Home() {
                     📊 Data Analytics
                   </span>
                   <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
-                    📊 MERN-Stack Developer
+                    📊 Python Developer
                   </span>
                   <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
                     📊 Frontend Developer
                   </span>
                   <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
-                    📊 Data Analytics
+                    📊 Python Developer
                   </span>
                 </div>
               </div>
