@@ -70,7 +70,7 @@ export default function About() {
   ];
 
   const currentlyLearning = [
-    { name: "Data Science", progress: 75, icon: Computer },
+    { name: "Data Science", progress: 60, icon: Computer },
     { name: "MERN-Stack Developer", progress: 50, icon: Server },
     { name: "Git & GitHub", progress: 75, icon: GitBranch },
     { name: "AL / ML", progress: 40, icon: Cpu },
@@ -78,7 +78,7 @@ export default function About() {
 
   const education = [
     {
-      degree: "MCA",
+      degree: "Master of Computer Application",
       institution: "AKS University, Satna(MP)",
       year: "2024 - 2026",
       status: "Completed",
