@@ -24,102 +24,6 @@ import useDisableInspect from "../hooks/useDisableInspect";
 const projectsData = {
   1: {
     id: 1,
-    title: "ApnaResturent",
-    description: "Restaurant website UI project.",
-    fullDescription:
-      "ApnaResturent is a frontend restaurant website designed to showcase food items, menu sections, and a clean user interface for customers. This project helped me strengthen my HTML, CSS, and JavaScript fundamentals.",
-    image: "/apna.png",
-    placeholderImage:
-      "https://placehold.co/800x400/EC4899/FFFFFF?text=ApnaResturent",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    category: "web",
-    status: "completed",
-    githubUrl: "https://github.com/15shivamgit/Apna-Resturernt",
-    liveUrl: "https://apna-resturernt.vercel.app/",
-    year: "2024",
-    team: "Solo",
-    duration: "1 month",
-    features: ["Responsive UI", "Menu sections", "Clean layout"],
-    challenges: ["Responsive design", "CSS layout alignment"],
-    learnings: ["HTML structure", "CSS Flexbox", "JavaScript basics"],
-    icon: School,
-  },
-
-  2: {
-    id: 2,
-    title: "Todo List App",
-    description: "Task management web app.",
-    fullDescription:
-      "A dynamic Todo List application that allows users to add, edit, delete, and mark tasks as completed. Built using React to understand component-based architecture.",
-    image: "/todo.png",
-    placeholderImage:
-      "https://placehold.co/800x400/3B82F6/FFFFFF?text=Todo+App",
-    technologies: ["React.js", "JavaScript", "Bootstrap"],
-    category: "web",
-    status: "completed",
-    githubUrl: "https://github.com/15shivamgit/todo-app-v3",
-    liveUrl: "https://todo-app-v3-delta.vercel.app/",
-    year: "2025",
-    team: "Solo",
-    duration: "1 month",
-    features: [
-      "Add / Edit / Delete tasks",
-      "Mark completed tasks",
-      "State management",
-    ],
-    challenges: ["State handling", "Component reusability"],
-    learnings: ["React hooks", "Component structure"],
-    icon: Code2,
-  },
-
-  3: {
-    id: 3,
-    title: "Calculator App",
-    description: "Simple calculator using React.",
-    fullDescription:
-      "A calculator application built using React that performs basic arithmetic operations. This project helped me understand event handling and component logic.",
-    image: "/cal.png",
-    placeholderImage:
-      "https://placehold.co/800x400/A855F7/FFFFFF?text=Calculator",
-    technologies: ["React.js", "JavaScript"],
-    category: "web",
-    status: "completed",
-    githubUrl: "https://github.com/15shivamgit/Calculater_v2",
-    liveUrl: "https://calculater-v2.vercel.app/",
-    year: "2025",
-    team: "Solo",
-    duration: "15 days",
-    features: ["Basic arithmetic operations", "Clean UI"],
-    challenges: ["Handling calculations"],
-    learnings: ["React events", "Component logic"],
-    icon: Heart,
-  },
-
-  4: {
-    id: 4,
-    title: "Weather Forecast App",
-    description: "Weather forecasting using API.",
-    fullDescription:
-      "A weather forecasting application that fetches real-time weather data and displays current conditions along with forecasts using external APIs.",
-    image: "/api.png",
-    placeholderImage:
-      "https://placehold.co/800x400/10B981/FFFFFF?text=Weather+App",
-    technologies: ["HTML", "JavaScript", "Weather API"],
-    category: "web",
-    status: "completed",
-    githubUrl: "https://github.com/15shivamgit/Weather-App",
-    liveUrl: "https://weather-app-olive-chi-19.vercel.app/",
-    year: "2025",
-    team: "Solo",
-    duration: "20 days",
-    features: ["Real-time weather", "API integration"],
-    challenges: ["API data handling"],
-    learnings: ["API integration", "Async JavaScript"],
-    icon: Brain,
-  },
-
-  5: {
-    id: 5,
     title: "BhaktiYatra",
     description: "MERN stack pilgrimage travel booking platform.",
     fullDescription:
@@ -156,68 +60,8 @@ const projectsData = {
     ],
     icon: Shield,
   },
-
-  6: {
-    id: 6,
-    title: "Travel & Tourism UI",
-    description: "Modern travel and tourism website UI.",
-    fullDescription:
-      "Travel & Tourism UI is a frontend-focused project created using React and Tailwind CSS. The goal of this project was to design a clean, modern, and fully responsive travel website UI with smooth layouts and reusable components.",
-    image: "/bhakti1.png",
-    placeholderImage:
-      "https://placehold.co/800x400/FACC15/000000?text=Travel+UI",
-    technologies: ["React", "Tailwind CSS", "JavaScript"],
-    category: "web",
-    status: "in-progress",
-    githubUrl: "https://github.com/15shivamgit/BhaktiYatra",
-    liveUrl: "https://bhakti-yatra-one.vercel.app/",
-    year: "2025",
-    team: "Solo",
-    duration: "Ongoing",
-    features: [
-      "Modern UI design",
-      "Responsive layout",
-      "Reusable components",
-      "Tailwind CSS styling",
-    ],
-    challenges: ["UI consistency", "Responsive design across devices"],
-    learnings: [
-      "Tailwind CSS mastery",
-      "Component-based UI design",
-      "Frontend best practices",
-    ],
-    icon: Code2,
-  },
-
-  7: {
-    id: 7,
-    title: "LMS – Student Module",
-    description: "Frontend module of Learning Management System.",
-    fullDescription:
-      "LMS Student Module is a frontend dashboard designed for students to manage courses, view learning content, and interact with the learning management system. This project was developed as part of a team project and focuses on UI, usability, and frontend-backend communication.",
-    image: "/lmsfrontend.png",
-    placeholderImage:
-      "https://placehold.co/800x400/6366F1/FFFFFF?text=LMS+Student+Module",
-    technologies: ["Tailwind CSS", "Python", "Django"],
-    category: "web",
-    status: "in-progress",
-    githubUrl: "https://github.com/15shivamgit/LMS-Student--Module-Backend-",
-    liveUrl: "https://lms-student-module-frontend.vercel.app/",
-    year: "2025",
-    team: "Team Project",
-    duration: "Ongoing",
-    features: [
-      "Student dashboard",
-      "Course tracking",
-      "Clean and responsive UI",
-    ],
-    challenges: ["Backend connectivity", "Team coordination"],
-    learnings: ["Team collaboration", "Frontend-backend integration"],
-    icon: Database,
-  },
-
-  9: {
-    id: 9,
+  2: {
+    id: 2,
     title: "IPL Data Analysis Dashboard",
     description: "Interactive Power BI dashboard for IPL data analysis.",
     fullDescription:
@@ -264,9 +108,162 @@ const projectsData = {
       "https://app.fabric.microsoft.com/view?r=eyJrIjoiZTdjYThjZGMtMjYxMS00ZTFjLWFkYzYtYjVlZDg5NTE5NDE3IiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9",
     icon: Database,
   },
+  3: {
+    id: 3,
+    title: "LMS – Student Module",
+    description: "Frontend module of Learning Management System.",
+    fullDescription:
+      "LMS Student Module is a frontend dashboard designed for students to manage courses, view learning content, and interact with the learning management system. This project was developed as part of a team project and focuses on UI, usability, and frontend-backend communication.",
+    image: "/lmsfrontend.png",
+    placeholderImage:
+      "https://placehold.co/800x400/6366F1/FFFFFF?text=LMS+Student+Module",
+    technologies: ["Tailwind CSS", "Python", "Django"],
+    category: "django",
+    status: "in-progress",
+    githubUrl: "https://github.com/15shivamgit/LMS-Student--Module-Backend-",
+    liveUrl: "https://lms-student-module-frontend.vercel.app/",
+    year: "2025",
+    team: "Team Project",
+    duration: "Ongoing",
+    features: [
+      "Student dashboard",
+      "Course tracking",
+      "Clean and responsive UI",
+    ],
+    challenges: ["Backend connectivity", "Team coordination"],
+    learnings: ["Team collaboration", "Frontend-backend integration"],
+    icon: Database,
+  },
 
-  10: {
-    id: 10,
+  4: {
+    id: 4,
+    title: "Weather Forecast App",
+    description: "Weather forecasting using API.",
+    fullDescription:
+      "A weather forecasting application that fetches real-time weather data and displays current conditions along with forecasts using external APIs.",
+    image: "/api.png",
+    placeholderImage:
+      "https://placehold.co/800x400/10B981/FFFFFF?text=Weather+App",
+    technologies: ["HTML", "JavaScript", "Weather API"],
+    category: "web",
+    status: "completed",
+    githubUrl: "https://github.com/15shivamgit/Weather-App",
+    liveUrl: "https://weather-app-olive-chi-19.vercel.app/",
+    year: "2025",
+    team: "Solo",
+    duration: "20 days",
+    features: ["Real-time weather", "API integration"],
+    challenges: ["API data handling"],
+    learnings: ["API integration", "Async JavaScript"],
+    icon: Brain,
+  },
+  5: {
+    id: 5,
+    title: "ApnaResturent",
+    description: "Restaurant website UI project.",
+    fullDescription:
+      "ApnaResturent is a frontend restaurant website designed to showcase food items, menu sections, and a clean user interface for customers. This project helped me strengthen my HTML, CSS, and JavaScript fundamentals.",
+    image: "/apna.png",
+    placeholderImage:
+      "https://placehold.co/800x400/EC4899/FFFFFF?text=ApnaResturent",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    category: "web",
+    status: "completed",
+    githubUrl: "https://github.com/15shivamgit/Apna-Resturernt",
+    liveUrl: "https://apna-resturernt.vercel.app/",
+    year: "2024",
+    team: "Solo",
+    duration: "1 month",
+    features: ["Responsive UI", "Menu sections", "Clean layout"],
+    challenges: ["Responsive design", "CSS layout alignment"],
+    learnings: ["HTML structure", "CSS Flexbox", "JavaScript basics"],
+    icon: School,
+  },
+
+  6: {
+    id: 6,
+    title: "Todo List App",
+    description: "Task management web app.",
+    fullDescription:
+      "A dynamic Todo List application that allows users to add, edit, delete, and mark tasks as completed. Built using React to understand component-based architecture.",
+    image: "/todo.png",
+    placeholderImage:
+      "https://placehold.co/800x400/3B82F6/FFFFFF?text=Todo+App",
+    technologies: ["React.js", "JavaScript", "Bootstrap"],
+    category: "web",
+    status: "completed",
+    githubUrl: "https://github.com/15shivamgit/todo-app-v3",
+    liveUrl: "https://todo-app-v3-delta.vercel.app/",
+    year: "2025",
+    team: "Solo",
+    duration: "1 month",
+    features: [
+      "Add / Edit / Delete tasks",
+      "Mark completed tasks",
+      "State management",
+    ],
+    challenges: ["State handling", "Component reusability"],
+    learnings: ["React hooks", "Component structure"],
+    icon: Code2,
+  },
+
+  7: {
+    id: 7,
+    title: "Calculator App",
+    description: "Simple calculator using React.",
+    fullDescription:
+      "A calculator application built using React that performs basic arithmetic operations. This project helped me understand event handling and component logic.",
+    image: "/cal.png",
+    placeholderImage:
+      "https://placehold.co/800x400/A855F7/FFFFFF?text=Calculator",
+    technologies: ["React.js", "JavaScript"],
+    category: "web",
+    status: "completed",
+    githubUrl: "https://github.com/15shivamgit/Calculater_v2",
+    liveUrl: "https://calculater-v2.vercel.app/",
+    year: "2025",
+    team: "Solo",
+    duration: "15 days",
+    features: ["Basic arithmetic operations", "Clean UI"],
+    challenges: ["Handling calculations"],
+    learnings: ["React events", "Component logic"],
+    icon: Heart,
+  },
+
+  8: {
+    id: 8,
+    title: "Travel & Tourism UI",
+    description: "Modern travel and tourism website UI.",
+    fullDescription:
+      "Travel & Tourism UI is a frontend-focused project created using React and Tailwind CSS. The goal of this project was to design a clean, modern, and fully responsive travel website UI with smooth layouts and reusable components.",
+    image: "/bhakti1.png",
+    placeholderImage:
+      "https://placehold.co/800x400/FACC15/000000?text=Travel+UI",
+    technologies: ["React", "Tailwind CSS", "JavaScript"],
+    category: "web",
+    status: "in-progress",
+    githubUrl: "https://github.com/15shivamgit/BhaktiYatra",
+    liveUrl: "https://bhakti-yatra-one.vercel.app/",
+    year: "2025",
+    team: "Solo",
+    duration: "Ongoing",
+    features: [
+      "Modern UI design",
+      "Responsive layout",
+      "Reusable components",
+      "Tailwind CSS styling",
+    ],
+    challenges: ["UI consistency", "Responsive design across devices"],
+    learnings: [
+      "Tailwind CSS mastery",
+      "Component-based UI design",
+      "Frontend best practices",
+    ],
+    icon: Code2,
+  },
+
+  9: {
+    id: 9,
     title: "IPL Performance Dashboard",
     description: "IPL data analytics dashboard using Power BI.",
     fullDescription:
@@ -576,17 +573,17 @@ export default function ProjectDetail() {
           ></iframe>
           */}
 
-          {/* Navigation to other projects */}
-          <div className="text-center">
-            <NavLink
-              to="/projects"
-              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg transition-all duration-200 hover:scale-105 text-lg font-semibold"
-            >
-              <Play className="w-5 h-5" />
-              View All Projects
-            </NavLink>
-          </div>
+        {/* Navigation to other projects */}
+        <div className="text-center">
+          <NavLink
+            to="/projects"
+            className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg transition-all duration-200 hover:scale-105 text-lg font-semibold"
+          >
+            <Play className="w-5 h-5" />
+            View All Projects
+          </NavLink>
         </div>
+      </div>
 
       <Footer />
     </>

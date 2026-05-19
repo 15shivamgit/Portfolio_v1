@@ -27,95 +27,16 @@ export default function Achievement() {
     setMounted(true);
   }, []);
 
-  const internshipData = {
-    id: 1,
-    title: "Software Development Intern",
-    company: "AKS University, Satna",
-    credentialId: "AKSU|CS|25|36",
-    period: "Jan 2025 – May 2025",
-    duration: "3 months",
-    location: "Satna, Madhya Pradesh",
-    description:
-      "Played a key role in automating CSE department workflows and developing software solutions to streamline academic processes, resulting in significant efficiency improvements.",
-    responsibilities: [
-      "Developed automation tools for department workflows",
-      "Collaborated with faculty on software solutions",
-      "Maintained and updated existing systems",
-      "Participated in code reviews and team meetings",
-      "Documented processes and created user manuals",
-    ],
-    achievements: [
-      {
-        title: "Process Automation",
-        description:
-          "Automated 3 key departmental processes, reducing manual work by 60%",
-        icon: Zap,
-        impact: "high",
-        metrics: "60% reduction in manual work",
-      },
-      {
-        title: "System Efficiency",
-        description:
-          "Improved system response time by 40% through optimization",
-        icon: Target,
-        impact: "high",
-        metrics: "40% performance improvement",
-      },
-      {
-        title: "Documentation",
-        description: "Created comprehensive documentation for 5 systems",
-        icon: FileText,
-        impact: "medium",
-        metrics: "5 systems documented",
-      },
-      {
-        title: "Team Collaboration",
-        description: "Mentored 2 junior interns on development best practices",
-        icon: Users,
-        impact: "medium",
-        metrics: "2 team members mentored",
-      },
-    ],
-    skills: [
-      "Software Development",
-      "Automation",
-      "Problem Solving",
-      "Team Collaboration",
-      "System Design",
-      "Documentation",
-    ],
-    technologies: ["React", "MongoDB", "Tailwind CSS", "JavaScript"],
-    icon: Code,
-    status: "completed",
-    color: "from-blue-500 to-cyan-500",
-    certificateUrl: "/certificates/software-intern.pdf",
-    mentor: "Anurag Garg",
-    mentorRole: "Senior Developer & Mentor",
-  };
-
-  const appreciationCertificates = [
-    {
-      id: 1,
-      title: "Appreciation Certificate",
-      issuer: "Head of Department, CSE & Mr. Anurag Garg",
-      issueDate: "June 2025",
-      description:
-        "Awarded for outstanding performance and significant contributions to department automation projects during the internship period.",
-      certificateUrl: "/certificates/hod-appreciation.pdf",
-      icon: Heart,
-      color: "from-red-500 to-pink-500",
-    },
-  ];
-
+  
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/ibm_certificate.jpg";
+    link.href = "/IRM.pdf";
     link.download = "certificate.jpg";
     link.click();
   };
 
   const handleViewCertificate = () => {
-    window.open("/ibm_certificate.jpg", "_blank");
+    window.open("/IRM.pdf", "_blank");
   };
 
   if (!mounted) {
@@ -275,7 +196,7 @@ export default function Achievement() {
                   className="flex-1 flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg transition-colors duration-200 font-medium"
                 >
                   <FileText className="w-5 h-5" />
-                  View Internship Certificate
+                  View Certificate
                 </button>
 
                 <button
