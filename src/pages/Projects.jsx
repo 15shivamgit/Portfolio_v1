@@ -58,7 +58,7 @@ export default function Projects() {
       technologies: ["Power BI","Python","NUmpy","Pandas","Matplotlib", "DAX", "Data Modeling", "Excel"],
       category: "data",
       status: "completed",
-      githubUrl: null,
+      githubUrl: "https://github.com/15shivamgit/IPL_Dashboard",
       linkUrl:
         "https://app.powerbi.com/view?r=eyJrIjoiZTdjYThjZGMtMjYxMS00ZTFjLWFkYzYtYjVlZDg5NTE5NDE3IiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9",
       year: "2026",
@@ -69,7 +69,7 @@ export default function Projects() {
     {
       id: 3,
       title: "LMS-Student Module",
-      description: "Interactive data visualization dashboard.",
+      description: "LMS-Student Module.",
       image: "/lmsfrontend.png",
       technologies: ["Python", "Tailwind CSS", "Django"],
       category: "django",
@@ -166,7 +166,7 @@ export default function Projects() {
       technologies: ["Power BI","Python","NUmpy","Pandas","Matplotlib", "DAX", "Data Analysis", "Excel"],
       category: "data",
       status: "completed",
-      githubUrl: null,
+      githubUrl: "https://github.com/15shivamgit/IPL_Dashboard",
       linkUrl:
         "https://app.powerbi.com/view?r=eyJrIjoiNjU0NTg5YTMtNzRmNi00N2NhLWI2OTktN2VjZWM3YTQyMzFmIiwidCI6IjdkYTQ0YzBhLWM1ZDMtNDY5My05M2YzLWI3MDg5ZDcyNzY3NCJ9",
       year: "2026",
