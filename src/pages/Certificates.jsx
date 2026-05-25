@@ -76,10 +76,12 @@ export default function Certificates() {
         "NumPy",
         "Pandas",
         "Data Analysis",
-        "Data Visualization"
+        "Data Visualization",
       ],
-      verificationUrl: "https://learn.saylor.org/admin/tool/certificate/index.php?code=3966369830SK",
-      certificateUrl: "https://learn.saylor.org/pluginfile.php/1/tool_certificate/issues/1779076363/3966369830SK.pdf",
+      verificationUrl:
+        "https://learn.saylor.org/admin/tool/certificate/index.php?code=3966369830SK",
+      certificateUrl:
+        "https://learn.saylor.org/pluginfile.php/1/tool_certificate/issues/1779076363/3966369830SK.pdf",
       icon: Brain,
       category: "certificate",
       status: "completed",
@@ -103,14 +105,42 @@ export default function Certificates() {
         "CSS",
         "JavaScript",
         "Responsive Design",
-        "Frontend Development"
+        "Frontend Development",
       ],
-      verificationUrl: "https://skill-india-dev.s3.ap-south-1.amazonaws.com/certificate_generic/uploaded_elements/2025021445759312/certificate_0e985123-f259-488a-9a41-a316980ea081.pdf?response-content-disposition=inline&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260518T042359Z&X-Amz-SignedHeaders=host&X-Amz-Expires=2000&X-Amz-Credential=AKIA3OJCFBJTPLAN4OGU%2F20260518%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=b4e5fa01660d5482cf9a90f53b9678b5a6ea2ec7cde92c13a0affaeb6eb6b3c6",
+      verificationUrl:
+        "https://skill-india-dev.s3.ap-south-1.amazonaws.com/certificate_generic/uploaded_elements/2025021445759312/certificate_0e985123-f259-488a-9a41-a316980ea081.pdf?response-content-disposition=inline&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260518T042359Z&X-Amz-SignedHeaders=host&X-Amz-Expires=2000&X-Amz-Credential=AKIA3OJCFBJTPLAN4OGU%2F20260518%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=b4e5fa01660d5482cf9a90f53b9678b5a6ea2ec7cde92c13a0affaeb6eb6b3c6",
       certificateUrl: "/certificates/design.pdf",
       icon: Code,
       category: "certificate",
       status: "completed",
       color: "from-yellow-500 to-orange-600",
+    },
+    {
+      id: 17,
+      type: "certificate",
+      title: "CS302: Software Engineering",
+      issuer: "Saylor University",
+      issueDate: "25 May 2026",
+      expiryDate: "Never",
+      credentialId: "8915723931SK",
+      period: "May 2026",
+      location: "Online",
+      description:
+        "Successfully completed CS302: Software Engineering course from Saylor University covering software development life cycle, software design principles, project management, testing methodologies, and engineering practices.",
+      skills: [
+        "Software Engineering",
+        "SDLC",
+        "Software Design",
+        "Project Management",
+        "Software Testing",
+        "Problem Solving",
+      ],
+      verificationUrl: "https://learn.saylor.org/admin/tool/certificate/index.php?code=8915723931SK",
+      certificateUrl: "https://learn.saylor.org/pluginfile.php/1/tool_certificate/issues/1779722097/8915723931SK.pdf",
+      icon: Code,
+      category: "certificate",
+      status: "completed",
+      color: "from-blue-600 to-slate-700",
     },
     {
       id: 3,
@@ -130,9 +160,10 @@ export default function Certificates() {
         "JavaScript",
         "Frontend Development",
         "Responsive Design",
-        "Web Development"
+        "Web Development",
       ],
-      verificationUrl: "https://skill-india-dev.s3.ap-south-1.amazonaws.com/certificate_generic/uploaded_elements/2025021445759312/certificate_0e985123-f259-488a-9a41-a316980ea081.pdf?response-content-disposition=inline&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260518T042359Z&X-Amz-SignedHeaders=host&X-Amz-Expires=2000&X-Amz-Credential=AKIA3OJCFBJTPLAN4OGU%2F20260518%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=b4e5fa01660d5482cf9a90f53b9678b5a6ea2ec7cde92c13a0affaeb6eb6b3c6",
+      verificationUrl:
+        "https://skill-india-dev.s3.ap-south-1.amazonaws.com/certificate_generic/uploaded_elements/2025021445759312/certificate_0e985123-f259-488a-9a41-a316980ea081.pdf?response-content-disposition=inline&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260518T042359Z&X-Amz-SignedHeaders=host&X-Amz-Expires=2000&X-Amz-Credential=AKIA3OJCFBJTPLAN4OGU%2F20260518%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=b4e5fa01660d5482cf9a90f53b9678b5a6ea2ec7cde92c13a0affaeb6eb6b3c6",
       certificateUrl: "/certificates/frontend.pdf",
       icon: Code,
       category: "certificate",
@@ -198,9 +229,10 @@ export default function Certificates() {
         "Pandas",
         "NumPy",
         "Data Visualization",
-        "Problem Solving"
+        "Problem Solving",
       ],
-      verificationUrl: "https://www.mindluster.com/student/certificate/69e45cbc",
+      verificationUrl:
+        "https://www.mindluster.com/student/certificate/69e45cbc",
       certificateUrl: "/certificates/Mindluster_analysis.pdf",
       icon: Brain,
       category: "certificate",
@@ -225,7 +257,7 @@ export default function Certificates() {
         "Data Analysis",
         "Machine Learning Basics",
         "Problem Solving",
-        "Analytical Thinking"
+        "Analytical Thinking",
       ],
       verificationUrl:
         "https://media.geeksforgeeks.org/courses/certificates/c32b4c62a78f80477dc56e63d6bcb74f.pdf",
@@ -254,9 +286,10 @@ export default function Certificates() {
         "CSS",
         "Responsive Design",
         "Frontend Development",
-        "UI Design"
+        "UI Design",
       ],
-      verificationUrl: "https://www.mindluster.com/student/certificate/11b08e8d",
+      verificationUrl:
+        "https://www.mindluster.com/student/certificate/11b08e8d",
       certificateUrl: "/certificates/Mindluster_web.pdf",
       icon: Code,
       category: "certificate",
@@ -352,8 +385,6 @@ export default function Certificates() {
       color: "from-blue-700 to-sky-600",
     },
 
-    
-
     {
       id: 13,
       type: "certificate",
@@ -374,10 +405,6 @@ export default function Certificates() {
       status: "completed",
       color: "from-indigo-500 to-purple-500",
     },
-    
-
-
-
   ];
 
   const allItems = [...experiences, ...certificates];
