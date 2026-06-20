@@ -29,6 +29,23 @@ export default function Projects() {
 
   const projects = [
     {
+      id: 0,
+      title: "Space Launch Analytics",
+      description:
+        "End-to-end data analytics project for global space launch operations and mission performance analysis.",
+      image: "/Launch Sites.png",
+      technologies: ["Python", "Pandas", "NumPy", "MySQL", "SQL", "Power BI"],
+      category: "data",
+      status: "completed",
+      githubUrl:
+        "https://github.com/15shivamgit/Space_Launch_Analysis.git",
+      linkUrl: null,
+      year: "2026",
+      team: "Team Project",
+      icon: Database,
+      fallbackColor: "from-indigo-500 to-blue-600",
+    },
+    {
       id: 1,
       title: "BhaktiYatra",
       description:
@@ -55,7 +72,16 @@ export default function Projects() {
       title: "IPL Data Analysis Dashboard",
       description: "Interactive Power BI dashboard for IPL data insights.",
       image: "/ipl_dash.png",
-      technologies: ["Power BI","Python","NUmpy","Pandas","Matplotlib", "DAX", "Data Modeling", "Excel"],
+      technologies: [
+        "Power BI",
+        "Python",
+        "NUmpy",
+        "Pandas",
+        "Matplotlib",
+        "DAX",
+        "Data Modeling",
+        "Excel",
+      ],
       category: "data",
       status: "completed",
       githubUrl: "https://github.com/15shivamgit/IPL_Dashboard",
@@ -142,7 +168,7 @@ export default function Projects() {
       team: "Solo",
       icon: Heart,
       fallbackColor: "from-purple-500 to-pink-500",
-    },    
+    },
     {
       id: 8,
       title: "Travel & Tourism UI",
@@ -163,7 +189,16 @@ export default function Projects() {
       title: "IPL Performance Dashboard",
       description: "IPL Performance analytics dashboard using Power BI.",
       image: "/ipl_dash2.png",
-      technologies: ["Power BI","Python","NUmpy","Pandas","Matplotlib", "DAX", "Data Analysis", "Excel"],
+      technologies: [
+        "Power BI",
+        "Python",
+        "NUmpy",
+        "Pandas",
+        "Matplotlib",
+        "DAX",
+        "Data Analysis",
+        "Excel",
+      ],
       category: "data",
       status: "completed",
       githubUrl: "https://github.com/15shivamgit/IPL_Dashboard",
