@@ -22,6 +22,60 @@ import useDisableInspect from "../hooks/useDisableInspect";
 /* ================= PROJECT DATA ================= */
 
 const projectsData = {
+  0: {
+    id: 0,
+    title: "Space Launch Analytics",
+    description: "Data analytics and business intelligence project.",
+    fullDescription:
+      "Space Launch Analytics is an end-to-end Data Analytics project designed to analyze global space launch operations, rocket performance, mission success rates, launch costs, payload efficiency, and orbital deployment trends. The project combines Python, SQL, MySQL, Pandas, NumPy, and Power BI to transform raw launch datasets into actionable business insights for strategic decision-making.",
+    image: "/space-launch.png",
+    placeholderImage:
+      "https://placehold.co/800x400/2563EB/FFFFFF?text=Space+Launch+Analytics",
+    technologies: [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "MySQL",
+      "SQL",
+      "SQLAlchemy",
+      "Power BI",
+    ],
+    category: "data",
+    status: "completed",
+    githubUrl: "https://github.com/15shivamgit/Space_Launch_Analysis.git",
+    liveUrl: null,
+    year: "2026",
+    team: "Team Project",
+    duration: "2 Months",
+    features: [
+      "Launch Success Rate Analysis",
+      "Rocket Performance Evaluation",
+      "Payload Efficiency Metrics",
+      "Cost Per Kilogram Analysis",
+      "Mission Reliability Ranking",
+      "Trend Analysis Dashboard",
+      "ISRO Mission Analytics",
+      "Power BI Executive Dashboard",
+    ],
+    challenges: [
+      "Cleaning and validating large launch datasets",
+      "Feature engineering for business KPIs",
+      "Building analytical data warehouse",
+      "Designing meaningful business dashboards",
+      "Handling mission outcome classification",
+    ],
+    learnings: [
+      "Advanced Data Analysis using Pandas",
+      "Business KPI Development",
+      "SQL Analytics and Query Optimization",
+      "Data Warehousing Concepts",
+      "Power BI Dashboard Design",
+      "ETL Pipeline Development",
+      "Data Quality Assessment",
+      "Business Intelligence Reporting",
+    ],
+    icon: Database,
+  },
   1: {
     id: 1,
     title: "BhaktiYatra",
