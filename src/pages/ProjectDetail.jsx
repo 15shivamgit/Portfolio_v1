@@ -28,7 +28,7 @@ const projectsData = {
     description: "Data analytics and business intelligence project.",
     fullDescription:
       "Space Launch Analytics is an end-to-end Data Analytics project designed to analyze global space launch operations, rocket performance, mission success rates, launch costs, payload efficiency, and orbital deployment trends. The project combines Python, SQL, MySQL, Pandas, NumPy, and Power BI to transform raw launch datasets into actionable business insights for strategic decision-making.",
-    image: "/space-launch.png",
+    image: "/Overview.png",
     placeholderImage:
       "https://placehold.co/800x400/2563EB/FFFFFF?text=Space+Launch+Analytics",
     technologies: [
