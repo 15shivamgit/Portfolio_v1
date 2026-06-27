@@ -22,6 +22,64 @@ import useDisableInspect from "../hooks/useDisableInspect";
 /* ================= PROJECT DATA ================= */
 
 const projectsData = {
+  10: {
+    id: 10,
+    title: "RGC India Corporate Website",
+    description: "Corporate website developed using WordPress and Elementor.",
+    fullDescription:
+      "RGC India is a professional multi-page corporate website developed using WordPress and Elementor. The project focuses on creating a modern, responsive, and user-friendly business website with dynamic content management, custom post types, advanced custom fields, reusable templates, and SEO-friendly architecture. The website showcases the company's services, industries, products, and corporate information while providing an excellent user experience across all devices.",
+    image: "/rgc.png",
+    placeholderImage:
+      "https://placehold.co/800x400/2563EB/FFFFFF?text=RGC+India+Website",
+    technologies: [
+      "WordPress",
+      "Elementor",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "ACF",
+      "Custom Post Type UI",
+      "Responsive Design"
+    ],
+    category: "wordpress",
+    status: "Running",
+    githubUrl: null,
+    liveUrl: "https://rgcindia.com",
+    year: "2026",
+    team: "Company Project",
+    duration: "2 Months",
+    features: [
+      "Responsive Corporate Website",
+      "Custom Header & Footer",
+      "Dynamic Pages using ACF",
+      "Custom Post Types",
+      "Elementor Templates",
+      "SEO Friendly Structure",
+      "Service & Product Pages",
+      "Contact Form Integration",
+      "Fast Loading Pages",
+      "Mobile Optimized Design"
+    ],
+    challenges: [
+      "Creating reusable Elementor templates",
+      "Managing dynamic content using ACF",
+      "Building custom post type layouts",
+      "Maintaining responsive design across devices",
+      "Optimizing website performance and SEO"
+    ],
+    learnings: [
+      "Advanced WordPress Development",
+      "Elementor Theme Builder",
+      "Custom Post Type UI",
+      "Advanced Custom Fields (ACF)",
+      "WordPress Theme Customization",
+      "Website Optimization",
+      "Responsive Web Design",
+      "Content Management System (CMS)"
+    ],
+    icon: Globe,
+  },
+
   0: {
     id: 0,
     title: "Space Launch Analytics",

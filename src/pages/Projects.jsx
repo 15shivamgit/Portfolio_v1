@@ -29,6 +29,30 @@ export default function Projects() {
 
   const projects = [
     {
+      id: 10,
+      title: "RGC India Corporate Website",
+      description: "Professional multi-page corporate website developed using WordPress and Elementor.",
+      image: "/rgc.png",
+      technologies: [
+        "WordPress",
+        "Elementor",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "ACF",
+        "CPT UI"
+      ],
+      category: "wordpress",
+      status: "completed",
+      githubUrl: null,
+      linkUrl: "https://rgcindia.com",
+      year: "2026",
+      team: "Company Project",
+      icon: Globe,
+      fallbackColor: "from-blue-600 to-indigo-700",
+    },
+
+    {
       id: 0,
       title: "Space Launch Analytics",
       description:
