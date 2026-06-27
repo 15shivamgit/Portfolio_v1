@@ -115,16 +115,16 @@ export default function Home() {
                     🚀 MERN-Stack Developer
                   </span>
                   <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
-                    📊 Data Analytics
+                    🌐 WordPress Developer
                   </span>
                   <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
-                    📊 Python Developer
+                    🐍 Python Developer
                   </span>
                   <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
-                    📊 Frontend Developer
+                    🌐 Frontend Developer
                   </span>
                   <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
-                    📊 Python Developer
+                    🐍 Python Developer
                   </span>
                 </div>
               </div>
