@@ -15,6 +15,7 @@ import {
   Clock,
   Play,
   Database,
+  Globe,
 } from "lucide-react";
 import Footer from "../components/Footer";
 import useDisableInspect from "../hooks/useDisableInspect";
