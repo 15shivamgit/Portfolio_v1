@@ -44,7 +44,7 @@ export default function Projects() {
         "CPT UI"
       ],
       category: "wordpress",
-      status: "completed",
+      status: "in-progress",
       githubUrl: null,
       linkUrl: "https://rgcindia.com",
       year: "2026",
