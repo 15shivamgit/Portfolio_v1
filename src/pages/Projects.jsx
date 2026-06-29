@@ -12,6 +12,7 @@ import {
   MessageCircle,
   Search,
   Link2Icon,
+  Globe,
 } from "lucide-react";
 import Footer from "../components/Footer";
 import useDisableInspect from "../hooks/useDisableInspect";
