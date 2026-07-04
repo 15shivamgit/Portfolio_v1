@@ -55,7 +55,7 @@ export default function Home() {
 
   const handleResumeDownload = () => {
     const link = document.createElement("a");
-    link.href = "/shivam_resume_analysis.pdf";
+    link.href = "/Shivam_frontend.pdf";
     link.download = "Shivam_Kumar_Resume.pdf";
     link.click();
   };
@@ -121,10 +121,10 @@ export default function Home() {
                     🐍 Python Developer
                   </span>
                   <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
-                    🌐 Frontend Developer
+                    🌐 Web Developer
                   </span>
                   <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
-                    🐍 Python Developer
+                    🐍 Software Engineer
                   </span>
                 </div>
               </div>
