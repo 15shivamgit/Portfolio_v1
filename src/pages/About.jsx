@@ -10,6 +10,7 @@ import {
   MapPin,
   Award,
   Cpu,
+  Eye,
   BarChart3,
   GitBranch,
   Terminal,
@@ -26,6 +27,8 @@ export default function About() {
   const [mounted, setMounted] = useState(false);
   const [activeTab, setActiveTab] = useState("education");
 
+  const [selectedImage, setSelectedImage] = useState(null);
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -33,13 +36,13 @@ export default function About() {
   const technicalSkills = [
     {
       category: "Programming Languages",
-      skills: ["C", "C++", "Python", "Java","C#"],
+      skills: ["C", "C++", "Python", "Java", "C#"],
       icon: Code,
       color: "from-blue-500 to-cyan-500",
     },
     {
       category: "Web Development",
-      skills: ["HTML", "CSS", "Tailwind","JavaScript","React"],
+      skills: ["HTML", "CSS", "Tailwind", "JavaScript", "React"],
       icon: Globe,
       color: "from-green-500 to-emerald-500",
     },
@@ -51,19 +54,26 @@ export default function About() {
     },
     {
       category: "Data Analytics",
-      skills: ["NumPy", "Pandas", "Matplotlib","PowerBI"],
+      skills: ["NumPy", "Pandas", "Matplotlib", "PowerBI"],
       icon: BarChart3,
       color: "from-purple-500 to-pink-500",
     },
     {
       category: "Framework/Library",
-      skills: ["Tailwindd/Boostrap", "React","Gjango"],
+      skills: ["Tailwindd/Boostrap", "React", "Gjango"],
       icon: Library,
       color: "from-purple-500 to-pink-500",
     },
     {
       category: "Tools",
-      skills: ["GitHub", "VS Code", "EXCEL", "Power BI", "Jupyter"],
+      skills: [
+        "GitHub",
+        "VS Code",
+        "EXCEL",
+        "Power BI",
+        "Jupyter",
+        "WordPress",
+      ],
       icon: Terminal,
       color: "from-yellow-500 to-orange-500",
     },
@@ -83,6 +93,7 @@ export default function About() {
       year: "2024 - 2026",
       status: "Completed",
       grade: "8.82 CGPA",
+      image: "/mca.png",
       icon: GraduationCap,
     },
     {
@@ -91,6 +102,7 @@ export default function About() {
       year: "2019 - 2023",
       status: "Completed",
       grade: "57%",
+      image: "/ba_history.png",
       icon: BookOpen,
     },
     {
@@ -99,6 +111,7 @@ export default function About() {
       year: "2017 - 2019",
       status: "Completed",
       grade: "56.8%",
+      image: "/12th_science.png",
       icon: School,
     },
     {
@@ -107,6 +120,7 @@ export default function About() {
       year: "2017",
       status: "Completed",
       grade: "74.4%",
+      image: "/10th_standard.png",
       icon: School,
     },
   ];
@@ -126,7 +140,7 @@ export default function About() {
   }
 
   return (
-     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-32 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -135,20 +149,27 @@ export default function About() {
       </div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-6 py-3 mb-6 shadow-lg">
             <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Available for opportunities</span>
+            <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
+              Available for opportunities
+            </span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-800 dark:text-white mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             About Me
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Passionate <span className="font-semibold text-blue-600 dark:text-blue-400">Software Developer</span> and {' '}
-            <span className="font-semibold text-green-600 dark:text-green-400">Data Analyst</span> with expertise in 
-            modern technologies and data-driven solutions.
+            Passionate{" "}
+            <span className="font-semibold text-blue-600 dark:text-blue-400">
+              Software Developer
+            </span>{" "}
+            and{" "}
+            <span className="font-semibold text-green-600 dark:text-green-400">
+              Data Analyst
+            </span>{" "}
+            with expertise in modern technologies and data-driven solutions.
           </p>
         </div>
 
@@ -160,8 +181,8 @@ export default function About() {
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center gap-3 px-6 py-3 rounded-2xl font-semibold transition-all duration-300 ${
                 activeTab === tab.id
-                  ? 'bg-white dark:bg-gray-800 shadow-lg text-blue-600 dark:text-blue-400 transform scale-105'
-                  : 'bg-white/50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800'
+                  ? "bg-white dark:bg-gray-800 shadow-lg text-blue-600 dark:text-blue-400 transform scale-105"
+                  : "bg-white/50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800"
               } backdrop-blur-sm border border-white/20`}
             >
               <tab.icon className="w-5 h-5" />
@@ -171,17 +192,19 @@ export default function About() {
         </div>
 
         {/* Education Tab */}
-        {activeTab === 'education' && (
+        {activeTab === "education" && (
           <section className="animate-fade-in">
             <div className="grid lg:grid-cols-2 gap-8">
               <div className="space-y-8">
                 {education.map((edu, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-white/20"
                   >
                     <div className="flex items-start gap-4">
-                      <div className={`p-3 rounded-xl bg-gradient-to-r ${index === 0 ? 'from-blue-500 to-cyan-500' : 'from-gray-500 to-gray-700'} shadow-lg`}>
+                      <div
+                        className={`p-3 rounded-xl bg-gradient-to-r ${index === 0 ? "from-blue-500 to-cyan-500" : "from-gray-500 to-gray-700"} shadow-lg`}
+                      >
                         <edu.icon className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
@@ -189,11 +212,13 @@ export default function About() {
                           <h3 className="text-xl font-bold text-gray-800 dark:text-white">
                             {edu.degree}
                           </h3>
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                            edu.status === 'Current' 
-                              ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
-                              : 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
-                          }`}>
+                          <span
+                            className={`px-2 py-1 rounded-full text-xs font-medium ${
+                              edu.status === "Current"
+                                ? "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+                                : "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+                            }`}
+                          >
                             {edu.status}
                           </span>
                         </div>
@@ -206,24 +231,35 @@ export default function About() {
                             <span>{edu.grade}</span>
                           </div>
                         </div>
-                        
+
                         <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
                           <div className="flex items-center gap-1">
                             <Calendar className="w-4 h-4" />
                             <span>{edu.year}</span>
                           </div>
                         </div>
+
+                        <div className="mt-4 flex items-center gap-3">
+                          <button
+                            onClick={() => setSelectedImage(edu.image)}
+                            className="flex items-center gap-2 px-3 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white transition"
+                          >
+                            <Eye className="w-4 h-4" />
+                            View Marksheet
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-              
+
               <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white shadow-2xl">
                 <h3 className="text-2xl font-bold mb-6">Career Vision</h3>
                 <p className="text-lg leading-relaxed mb-6 opacity-90">
-                  To become a software developer and data analyst, leveraging my communication, 
-                  interpersonal, and technical skills in a professional environment.
+                  To become a software developer and data analyst, leveraging my
+                  communication, interpersonal, and technical skills in a
+                  professional environment.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -236,7 +272,9 @@ export default function About() {
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse"></div>
-                    <span>Focused on software development & data analytics</span>
+                    <span>
+                      Focused on software development & data analytics
+                    </span>
                   </div>
                 </div>
               </div>
@@ -245,15 +283,17 @@ export default function About() {
         )}
 
         {/* Technical Skills Tab */}
-        {activeTab === 'skills' && (
+        {activeTab === "skills" && (
           <section className="animate-fade-in">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {technicalSkills.map((skillGroup, index) => (
-                <div 
+                <div
                   key={index}
                   className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-white/20 group"
                 >
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${skillGroup.color} w-12 h-12 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`p-3 rounded-xl bg-gradient-to-r ${skillGroup.color} w-12 h-12 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                  >
                     <skillGroup.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
@@ -261,12 +301,14 @@ export default function About() {
                   </h3>
                   <div className="space-y-3">
                     {skillGroup.skills.map((skill, skillIndex) => (
-                      <div 
+                      <div
                         key={skillIndex}
                         className="flex items-center gap-3 p-2 rounded-lg hover:bg-white/50 dark:hover:bg-gray-700/50 transition-colors duration-200"
                       >
                         <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
-                        <span className="text-gray-700 dark:text-gray-300 font-medium">{skill}</span>
+                        <span className="text-gray-700 dark:text-gray-300 font-medium">
+                          {skill}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -277,12 +319,12 @@ export default function About() {
         )}
 
         {/* Currently Learning Tab */}
-        {activeTab === 'learning' && (
+        {activeTab === "learning" && (
           <section className="animate-fade-in">
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 {currentlyLearning.map((item, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/20"
                   >
@@ -295,7 +337,7 @@ export default function About() {
                           {item.name}
                         </h3>
                         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                          <div 
+                          <div
                             className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-1000 ease-out"
                             style={{ width: `${item.progress}%` }}
                           ></div>
@@ -308,16 +350,21 @@ export default function About() {
                   </div>
                 ))}
               </div>
-              
+
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/20">
-                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">Learning Focus</h3>
+                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+                  Learning Focus
+                </h3>
                 <div className="space-y-4">
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                    Currently enhancing my skills in modern web development with Next.js and 
-                    expanding my expertise in machine learning and advanced data analytics.
+                    Currently enhancing my skills in modern web development with
+                    Next.js and expanding my expertise in machine learning and
+                    advanced data analytics.
                   </p>
                   <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-700 dark:to-gray-600 rounded-xl p-4">
-                    <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Upcoming Goals:</h4>
+                    <h4 className="font-semibold text-gray-800 dark:text-white mb-2">
+                      Upcoming Goals:
+                    </h4>
                     <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                       <li>• Master Git & Github ecosystem</li>
                       <li>• Build end-to-end data analytics projects</li>
@@ -336,22 +383,60 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-6 text-center">
             <div className="flex flex-col items-center">
               <MapPin className="w-8 h-8 text-blue-600 dark:text-blue-400 mb-3" />
-              <h4 className="font-semibold text-gray-800 dark:text-white">Location</h4>
-              <p className="text-gray-600 dark:text-gray-300">Begusarai, Bihar</p>
+              <h4 className="font-semibold text-gray-800 dark:text-white">
+                Location
+              </h4>
+              <p className="text-gray-600 dark:text-gray-300">
+                Begusarai, Bihar
+              </p>
             </div>
             <div className="flex flex-col items-center">
               <GraduationCap className="w-8 h-8 text-green-600 dark:text-green-400 mb-3" />
-              <h4 className="font-semibold text-gray-800 dark:text-white">Status</h4>
-              <p className="text-gray-600 dark:text-gray-300">Student & Active Learner</p>
+              <h4 className="font-semibold text-gray-800 dark:text-white">
+                Status
+              </h4>
+              <p className="text-gray-600 dark:text-gray-300">
+                Student & Active Learner
+              </p>
             </div>
             <div className="flex flex-col items-center">
               <Calendar className="w-8 h-8 text-purple-600 dark:text-purple-400 mb-3" />
-              <h4 className="font-semibold text-gray-800 dark:text-white">Experience</h4>
+              <h4 className="font-semibold text-gray-800 dark:text-white">
+                Experience
+              </h4>
               <p className="text-gray-600 dark:text-gray-300">0+ __/__</p>
             </div>
           </div>
         </section>
       </div>
+
+      {/* Marksheet showing */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div
+            className="relative inline-block"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-white/90 hover:bg-red-600 hover:text-white text-gray-700 transition-all duration-300 flex items-center justify-center shadow-xl"
+            >
+              ×
+            </button>
+
+            {/* Marksheet */}
+            <img
+              src={selectedImage}
+              alt="Marksheet"
+              className="max-w-[95vw] max-h-[90vh] object-contain rounded-xl shadow-2xl"
+            />
+          </div>
+        </div>
+      )}
 
       <Footer></Footer>
 
