@@ -54,7 +54,7 @@ export default function About() {
     },
     {
       category: "Data Analytics",
-      skills: ["NumPy", "Pandas", "Matplotlib", "PowerBI"],
+      skills: ["NumPy", "Pandas", "Matplotlib", "PowerBI", "EXCEL", "SQL"],
       icon: BarChart3,
       color: "from-purple-500 to-pink-500",
     },
@@ -69,8 +69,6 @@ export default function About() {
       skills: [
         "GitHub",
         "VS Code",
-        "EXCEL",
-        "Power BI",
         "Jupyter",
         "WordPress",
       ],

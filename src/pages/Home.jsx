@@ -121,7 +121,7 @@ export default function Home() {
                     🐍 Python Developer
                   </span>
                   <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
-                    🌐 Web Developer
+                    🌐 SQL Developer
                   </span>
                   <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
                     🐍 Software Engineer
