@@ -49,14 +49,14 @@ export default function Home() {
     {
       icon: Twitter,
       text: "Shivam Kumar",
-      link: "https://x.com/Shivam748888",
+      link: "https://x.com/15shivambgs",
     },
   ];
 
   const handleResumeDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Shivam_frontend.pdf";
-    link.download = "Shivam_Kumar_Resume.pdf";
+    link.href = "/Shivam_FullStack.pdf";
+    link.download = "Shivam_Resume.pdf";
     link.click();
   };
 
