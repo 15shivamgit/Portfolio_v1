@@ -29,4 +29,4 @@ dist-ssr
 !.env.example
 
 # Source photos, optimized copies live in public/images
-docs/
+docs/certificates/

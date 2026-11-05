@@ -40,6 +40,10 @@ All content lives in `src/data`, so most updates need no component changes.
 | -------------------- | ---------------------------------------------------------------------------------------------- |
 | `VITE_WEB3FORMS_KEY` | Access key from [web3forms.com](https://web3forms.com). Add it in Vercel project settings too. |
 
+## Documentation
+
+Specs, decisions, task plans and how-to guides are in [`docs/`](docs/README.md).
+
 ## Accessibility
 
 The site honours the system reduced-motion setting and supports keyboard navigation, including the certificate viewer and the before/after slider.
