@@ -1,260 +1,156 @@
-import { useState, useEffect } from "react";
-import {
-  Award,
-  Calendar,
-  MapPin,
-  Building,
-  Download,
-  Users,
-  Code,
-  FileText,
-  CheckCircle,
-  Target,
-  Zap,
-  Heart,
-  Trophy,
-  Brain,
-} from "lucide-react";
-import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
-import useDisableInspect from "../hooks/useDisableInspect";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Calendar, Check, MapPin, Trophy, Users } from "lucide-react";
+import CertModal from "../components/ui/CertModal";
+import Reveal from "../components/ui/Reveal";
+import ScrollGallery from "../components/ui/ScrollGallery";
+import { Button, SpotlightCard } from "../components/ui/Interactive";
+import { CountUp, Odometer } from "../components/ui/Numbers";
+import { SectionHead, SplitChars } from "../components/ui/Text";
+import usePageTitle from "../hooks/usePageTitle";
+import { EASE } from "../lib/motion";
+import { certificates, goerCertificate } from "../data/certificates";
+import { goerHero, goerPhotos } from "../data/goer";
 
-export default function Achievement() {
-  useDisableInspect();
-  const [mounted, setMounted] = useState(false);
+const RMAT_SKILLS = ["Business Logic", "Analytical Reasoning", "Decision Making", "Risk Thinking"];
+const TEAM = "Aditi Singh (student leader), Yukti Singh, Pranaw Gautam, Shivam Kumar, Sana Khan, Smriti Nigam, Rahul Dwivedi, Sahendra Singh, Ankush Gupta, Akanksha Garg";
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/IRM.pdf";
-    link.download = "certificate.jpg";
-    link.click();
-  };
-
-  const handleViewCertificate = () => {
-    window.open("/IRM.pdf", "_blank");
-  };
-
-  if (!mounted) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
-      </div>
-    );
-  }
-
+function Gauge({ percent }) {
+  const R = 86;
+  const C = Math.PI * R;
   return (
-    <>
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300 py-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="min-h-screen bg-[#0b1220] text-white py-10 px-4">
-            <div className="max-w-5xl mx-auto">
-              {/* Header */}
-              <div className="text-center mb-10">
-                <div className="inline-flex items-center gap-2 bg-blue-600/20 px-5 py-2 rounded-full mb-4">
-                  <Trophy className="w-5 h-5 text-blue-400" />
-                  <span className="text-sm text-blue-300 font-medium">
-                    National Level Achievement
-                  </span>
-                </div>
-
-                <h1 className="text-4xl font-bold mb-3">
-                  GOER 2025 – National Finalist
-                </h1>
-                <p className="text-gray-300 max-w-3xl mx-auto">
-                  Selected among{" "}
-                  <span className="text-blue-400 font-semibold">
-                    Top 10 Universities in India
-                  </span>{" "}
-                  at the prestigious Game of Enterprise Risk (GOER 2025)
-                  organized by Institute of Risk Management (IRM), India
-                  Affiliate.
-                </p>
-              </div>
-
-              {/* Main Card */}
-              <div className="bg-[#121a2f] border border-white/10 rounded-2xl shadow-xl p-8 mb-10">
-                <div className="flex flex-col md:flex-row justify-between gap-6">
-                  {/* Left */}
-                  <div>
-                    <h2 className="text-2xl font-bold mb-2">
-                      AKS University, Satna (M.P.)
-                    </h2>
-
-                    <div className="flex flex-wrap gap-4 text-gray-300 text-sm mt-4">
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-blue-400" />
-                        <span>5 July 2025</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4 text-blue-400" />
-                        <span>Mumbai (SDA Bocconi Asia Center, Powai)</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Users className="w-4 h-4 text-blue-400" />
-                        <span>Team: Intrepid Explorers (MCA)</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Badge */}
-                  <div className="flex items-center">
-                    <span className="px-4 py-2 rounded-full bg-green-500/20 text-green-300 text-sm font-semibold">
-                      Top 10 Finalist
-                    </span>
-                  </div>
-                </div>
-
-                {/* Description */}
-                <p className="text-gray-300 mt-6 leading-relaxed">
-                  The MCA team of AKS University delivered an exceptional
-                  performance through multiple competitive stages and qualified
-                  for the final national round of GOER 2025. The competition
-                  involved premier institutes like IIMs, Symbiosis, Welingkar,
-                  Parul University, and others. Our team demonstrated strong
-                  analytical thinking, teamwork, and risk-based decision-making.
-                </p>
-              </div>
-
-              {/* Team Section */}
-              <div className="bg-[#121a2f] border border-white/10 rounded-2xl p-8 mb-10">
-                <h3 className="text-xl font-bold mb-4">Team & Mentorship</h3>
-
-                <ul className="space-y-2 text-gray-300">
-                  <li>
-                    🎯 Faculty Mentor: <b>Prof. Akhilesh A. Waoo</b>
-                  </li>
-                  <li>
-                    👩‍🎓 Student Leader: <b>Aditi Singh</b>
-                  </li>
-                  <li>
-                    👥 Team Members: Yukti Singh, Pranaw Gautam,{" "}
-                    <b>Shivam Kumar</b>, Sana Khan, Smriti Nigam, Rahul Dwivedi,
-                    Sahendra Singh, Ankush Gupta, Akanksha Garg
-                  </li>
-                </ul>
-              </div>
-
-              {/* RMAT Achievement */}
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 mb-10">
-                <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                  <Award className="w-6 h-6" />
-                  RMAT – Risk Management Aptitude Test
-                </h3>
-
-                <p className="text-lg mb-4">
-                  Scored <b>96% (240 / 250)</b> in RMAT conducted by Institute
-                  of Risk Management (IRM).
-                </p>
-
-                <div className="grid md:grid-cols-4 gap-4 mt-6">
-                  {[
-                    "Business Logic",
-                    "Analytical Reasoning",
-                    "Decision Making",
-                    "Risk Thinking",
-                  ].map((skill, i) => (
-                    <div
-                      key={i}
-                      className="bg-white/10 rounded-xl p-4 flex items-center gap-3"
-                    >
-                      <CheckCircle className="w-5 h-5 text-green-300" />
-                      <span>{skill}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Key Highlights */}
-              <div className="grid md:grid-cols-3 gap-6">
-                <Highlight
-                  icon={<Zap />}
-                  title="National Exposure"
-                  desc="Competed against India's top management institutes"
-                />
-                <Highlight
-                  icon={<Brain />}
-                  title="Risk Strategy"
-                  desc="Hands-on experience in enterprise risk scenarios"
-                />
-                <Highlight
-                  icon={<Target />}
-                  title="Team Excellence"
-                  desc="Strong collaboration & leadership under pressure"
-                />
-              </div>
-
-
-              {/* Action Buttons */}
-              <div className="flex gap-4 mt-6 pt-6 border-t border-gray-200 dark:border-gray-600">
-                <button
-                  onClick={() => handleViewCertificate()}
-                  className="flex-1 flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg transition-colors duration-200 font-medium"
-                >
-                  <FileText className="w-5 h-5" />
-                  View Certificate
-                </button>
-
-                <button
-                  onClick={() => handleDownload()}
-                  className="flex items-center justify-center gap-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 py-3 px-6 rounded-lg transition-colors duration-200 font-medium"
-                  title="Download Certificate"
-                >
-                  <Download className="w-5 h-5" />
-                </button>
-              </div>
-
-
-            </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center">
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-4">
-                Want to see more?
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                Explore my other experiences and certificates.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/certificates"
-                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
-                >
-                  <Award className="w-5 h-5" />
-                  View All Certificates
-                </Link>
-                <Link
-                  to="/projects"
-                  className="inline-flex items-center gap-2 border-2 border-blue-600 text-blue-600 dark:text-blue-400 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200"
-                >
-                  <Code className="w-5 h-5" />
-                  View Projects
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
+    <svg viewBox="0 0 200 112" className="w-full max-w-[17rem]" role="img" aria-label={`${percent} percent`}>
+      <path d={`M14 100 A ${R} ${R} 0 0 1 186 100`} fill="none" stroke="var(--line)" strokeWidth="14" strokeLinecap="round" />
+      <motion.path
+        d={`M14 100 A ${R} ${R} 0 0 1 186 100`}
+        fill="none"
+        stroke="var(--accent)"
+        strokeWidth="14"
+        strokeLinecap="round"
+        strokeDasharray={C}
+        initial={{ strokeDashoffset: C }}
+        whileInView={{ strokeDashoffset: C * (1 - percent / 100) }}
+        viewport={{ once: true }}
+        transition={{ duration: 2.1, ease: EASE, delay: 0.2 }}
+      />
+    </svg>
   );
 }
 
-/* Highlight Card */
-function Highlight({ icon, title, desc }) {
+export default function Achievements() {
+  usePageTitle("Achievements");
+  const [open, setOpen] = useState(null);
+  const rmat = certificates.find((c) => c.id === "rmat");
+  const aps = certificates.find((c) => c.id === "aps");
+
   return (
-    <div className="bg-[#121a2f] border border-white/10 rounded-2xl p-6 text-center">
-      <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-blue-600/20 flex items-center justify-center text-blue-400">
-        {icon}
+    <>
+      <section className="shell pt-32 sm:pt-44">
+        <p className="eyebrow"><span className="text-accent-ink">/</span> Achievements</p>
+        <h1 className="mt-5 flex flex-wrap items-baseline gap-x-5 text-[clamp(4.4rem,17vw,15rem)] font-bold leading-[0.85] tracking-[-0.06em]">
+          <SplitChars text="Top" delay={0.3} />
+          <SplitChars text="10" delay={0.48} className="font-serif font-normal italic tracking-[-0.03em] text-accent-ink" />
+        </h1>
+        <motion.p className="mt-6 max-w-3xl text-xl text-muted sm:text-2xl" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.75, duration: 0.7, ease: EASE }}>
+          Universities in India, at the national final of the Game of Enterprise Risk 2025.
+        </motion.p>
+      </section>
+
+      <section className="shell mt-12">
+        <motion.figure
+          initial={{ opacity: 0, clipPath: "inset(10% 6% round 32px)" }}
+          animate={{ opacity: 1, clipPath: "inset(0% 0% round 32px)" }}
+          transition={{ duration: 1.2, ease: EASE, delay: 0.7 }}
+        >
+          <img src={goerHero.src} alt={goerHero.caption} className="aspect-[4/3] w-full object-cover sm:aspect-[21/10]" />
+        </motion.figure>
+      </section>
+
+      <section className="shell mt-5 grid gap-5 lg:grid-cols-[1.5fr_1fr]">
+        <Reveal>
+          <SpotlightCard tilt={1.5} className="h-full p-7 sm:p-10">
+            <span className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-1 text-sm font-medium text-accent-ink"><Trophy size={15} /> National finalist</span>
+            <h2 className="mt-5 text-3xl sm:text-4xl">GOER 2025, Institute of Risk Management India</h2>
+            <p className="mt-4 text-muted">
+              Our MCA team from AKS University, Satna moved through multiple competitive stages to reach the
+              national final, alongside premier institutes including IIMs, Symbiosis, Welingkar and Parul
+              University. The competition tested analytical thinking, teamwork and risk-based decision-making.
+            </p>
+            <ul className="mt-6 grid gap-3 text-sm sm:grid-cols-2">
+              <li className="flex items-center gap-2.5"><Calendar size={16} className="text-accent-ink" /> 5 July 2025</li>
+              <li className="flex items-center gap-2.5"><MapPin size={16} className="text-accent-ink" /> SDA Bocconi Asia Center, Mumbai</li>
+              <li className="flex items-center gap-2.5 sm:col-span-2"><Users size={16} className="shrink-0 text-accent-ink" /> Team Intrepid Explorers, mentored by Prof. Akhilesh A. Waoo</li>
+            </ul>
+            <p className="mt-6 border-t border-line pt-5 text-sm text-muted">{TEAM}</p>
+          </SpotlightCard>
+        </Reveal>
+        <Reveal delay={0.12}>
+          <button type="button" onClick={() => setOpen(goerCertificate)} data-cursor aria-label="View the GOER 2025 certificate" className="group relative block h-full min-h-96 w-full overflow-hidden rounded-3xl border border-line bg-white shadow-soft">
+            <img src={goerCertificate.thumb} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+            <span className="absolute bottom-4 left-4 rounded-full bg-[#15120e] px-3 py-1.5 text-sm font-medium text-[#faf6f0]">View certificate</span>
+          </button>
+        </Reveal>
+      </section>
+
+      <div className="mt-24">
+        <ScrollGallery photos={goerPhotos} eyebrow="Mumbai, July 2025" title="The final, in pictures" />
       </div>
-      <h4 className="font-bold mb-2">{title}</h4>
-      <p className="text-gray-400 text-sm">{desc}</p>
-    </div>
+
+      <section className="py-20 sm:py-28">
+        <div className="shell">
+          <SectionHead eyebrow="RMAT" title="Risk Management Aptitude Test" className="mb-12" />
+          <div className="grid items-center gap-10 rounded-[2rem] border border-line bg-card p-7 sm:p-12 lg:grid-cols-2">
+            <div className="flex flex-col items-center text-center">
+              <Gauge percent={96} />
+              <p className="-mt-14 font-display text-[clamp(3.6rem,8vw,5.5rem)] font-bold leading-none tracking-[-0.05em]">
+                <Odometer value={240} />
+              </p>
+              <p className="mt-2 font-mono text-sm text-muted">out of 250, which is <CountUp value={96} suffix="%" className="font-semibold text-accent-ink" /></p>
+            </div>
+            <div>
+              <p className="text-lg text-muted">
+                A computer-adaptive standardised exam that assesses business logic, problem solving, decision
+                making, risk thinking and analytical reasoning. Taken on 10 May 2025.
+              </p>
+              <ul className="mt-6 grid gap-2 sm:grid-cols-2">
+                {RMAT_SKILLS.map((s, i) => (
+                  <Reveal as="li" key={s} delay={i * 0.08} y={12} className="flex items-center gap-2.5 rounded-2xl border border-line px-3.5 py-3 text-sm font-medium">
+                    <Check size={16} className="text-accent-ink" /> {s}
+                  </Reveal>
+                ))}
+              </ul>
+              <button type="button" onClick={() => setOpen(rmat)} className="mt-6 text-sm font-medium text-accent-ink underline underline-offset-4">View score report</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="shell py-20 sm:py-28">
+        <div className="grid items-center gap-8 md:grid-cols-[1fr_1.2fr]">
+          <Reveal>
+            <p className="eyebrow mb-4"><span className="text-accent-ink">/</span> National quiz</p>
+            <p className="font-display text-[clamp(4rem,12vw,8rem)] font-bold leading-none tracking-[-0.05em]"><CountUp value={50} /><span className="text-muted">/50</span></p>
+            <h2 className="mt-4 text-2xl sm:text-3xl">Exploring AI Tools and Techniques</h2>
+            <p className="mt-3 text-muted">A national level online quiz by APS University, Rewa, held on World Computer Day, February 2025.</p>
+            <button type="button" onClick={() => setOpen(aps)} className="mt-4 text-sm font-medium text-accent-ink underline underline-offset-4">View certificate</button>
+          </Reveal>
+          <Reveal delay={0.12}>
+            <button type="button" onClick={() => setOpen(aps)} data-cursor aria-label="View the APS University quiz certificate" className="block w-full overflow-hidden rounded-3xl border border-line bg-white shadow-soft">
+              <img src={aps.thumb} alt="" loading="lazy" className="w-full transition-transform duration-700 hover:scale-105" />
+            </button>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="shell flex flex-wrap items-center justify-between gap-6 border-t border-line py-16">
+        <h2 className="text-3xl sm:text-4xl">See what else I've done</h2>
+        <div className="flex flex-wrap gap-3">
+          <Button to="/certificates" variant="ghost">All certificates</Button>
+          <Button to="/projects">View projects</Button>
+        </div>
+      </section>
+
+      <CertModal cert={open} onClose={() => setOpen(null)} />
+    </>
   );
 }
