@@ -1,51 +1,42 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-/* ===== Layout ===== */
-import Layout from "./components/Layout";
-
-/* ===== Pages ===== */
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import Layout, { PageTransition } from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import Certificates from "./pages/Certificates";
+import Achievements from "./pages/Achievements";
 import Contact from "./pages/Contact";
-import Achievement from "./pages/Achievements";
+import NotFound from "./pages/NotFound";
+import { scroller } from "./lib/motion";
 
-/* ===== 404 Page ===== */
-function NotFound() {
+function AnimatedRoutes() {
+  const location = useLocation();
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
-      <h1 className="text-4xl font-bold mb-4">404</h1>
-      <p className="text-gray-600 mb-6">Page not found</p>
-      <a
-        href="/"
-        className="px-6 py-3 bg-blue-600 text-white rounded-lg"
-      >
-        Go Home
-      </a>
-    </div>
+    <AnimatePresence mode="wait" initial={false} onExitComplete={() => scroller.toTop()}>
+      <PageTransition key={location.pathname}>
+        <Routes location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
+          <Route path="/certificates" element={<Certificates />} />
+          <Route path="/achievements" element={<Achievements />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </PageTransition>
+    </AnimatePresence>
   );
 }
 
 export default function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Layout>
-        <Routes>
-          {/* ===== Main Pages ===== */}
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:id" element={<ProjectDetail />} />
-          <Route path="/certificates" element={<Certificates />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/achievements" element={<Achievement />} />
-
-          {/* ===== 404 ===== */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <AnimatedRoutes />
       </Layout>
-    </Router>
+    </BrowserRouter>
   );
 }

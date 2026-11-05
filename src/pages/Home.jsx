@@ -1,308 +1,135 @@
-import { useState, useEffect } from "react";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Linkedin,
-  Github,
-  Download,
-  MessageCircle,
-  Award,
-  Calendar,
-  Users,
-  Target,
-  Instagram,
-  Twitter,
-} from "lucide-react";
-import Footer from "../components/Footer";
-import useDisableInspect from "../hooks/useDisableInspect";
+import { useRef } from "react";
+import { Link } from "react-router-dom";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowUpRight, Mail } from "lucide-react";
+import Hero from "../components/home/Hero";
+import ProjectStack from "../components/home/ProjectStack";
+import Bento from "../components/home/Bento";
+import ProcessDraw from "../components/home/ProcessDraw";
+import ExperienceCard from "../components/ExperienceCard";
+import BeforeAfter from "../components/ui/BeforeAfter";
+import Timeline from "../components/ui/Timeline";
+import Pings from "../components/ui/Pings";
+import Reveal from "../components/ui/Reveal";
+import { Button, Marquee } from "../components/ui/Interactive";
+import { CountUp } from "../components/ui/Numbers";
+import { ScrollText, SectionHead, SplitWords } from "../components/ui/Text";
+import usePageTitle from "../hooks/usePageTitle";
+import { heroStats, marqueeTech, profile } from "../data/profile";
+import { experience } from "../data/experience";
+import { projects } from "../data/projects";
+import { goerHero } from "../data/goer";
+
+function AchievementBand() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const y = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
+  return (
+    <section className="shell pt-20 sm:pt-28">
+      <Reveal y={30}>
+        <Link ref={ref} to="/achievements" className="group relative block aspect-[4/5] overflow-hidden rounded-[2rem] sm:aspect-[21/9]">
+          <motion.img src={goerHero.src} alt={goerHero.caption} loading="lazy" style={{ y, scale: 1.18 }} className="absolute inset-0 h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-4 p-6 text-white sm:p-10">
+            <div>
+              <p className="font-mono text-xs uppercase tracking-[0.14em] opacity-80">GOER 2025 national finalist</p>
+              <p className="mt-2 font-display text-[clamp(2.2rem,5.5vw,4.5rem)] font-bold leading-none tracking-[-0.04em]">Top 10 universities in India</p>
+            </div>
+            <span className="grid h-12 w-12 place-items-center rounded-full bg-accent text-on-accent transition-transform duration-500 group-hover:rotate-45">
+              <ArrowUpRight size={22} />
+            </span>
+          </div>
+        </Link>
+      </Reveal>
+    </section>
+  );
+}
 
 export default function Home() {
-  useDisableInspect();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const stats = [
-    { number: "1+ Year", label: "Learner", icon: Award },
-    { number: "5+", label: "Projects Completed", icon: Award },
-    { number: "2+", label: "Years Learning", icon: Calendar },
-    { number: "5+", label: "Technologies", icon: Users },
-    { number: "100%", label: "Dedication", icon: Target },
-  ];
-
-  const contactInfo = [
-    { icon: MapPin, text: "Ramdiri-III Begusarai Bihar 851129", link: null },
-    { icon: Phone, text: "+91 7488881563", link: "tel:+917488881563" },
-    {
-      icon: Mail,
-      text: "15shivambgs@gmail.com",
-      link: "mailto:15shivambgs@gmail.com",
-    },
-    {
-      icon: Instagram,
-      text: "Shivam Kumar",
-      link: "https://www.instagram.com/15shivambgs",
-    },
-    {
-      icon: Twitter,
-      text: "Shivam Kumar",
-      link: "https://x.com/15shivambgs",
-    },
-  ];
-
-  const handleResumeDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/Shivam_FullStack.pdf";
-    link.download = "Shivam_Resume.pdf";
-    link.click();
-  };
-
-  const handleContactClick = () => {
-    const section = document.getElementById("contact-section");
-    section?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const handleImageError = (e) => {
-    e.target.style.display = "none";
-    e.target.nextSibling.style.display = "flex";
-  };
-
-  if (!mounted) {
-    return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
-      </div>
-    );
-  }
+  usePageTitle();
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-white py-16 md:py-24">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
-            <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-white text-4xl font-bold border-4 border-white shadow-lg overflow-hidden">
-              <img
-                src="/shivam.png"
-                alt="Shivam Kumar"
-                className="w-full h-full object-cover"
-                onError={handleImageError}
-              />
-              <div className="hidden items-center justify-center w-full h-full">
-                SK
-              </div>
-            </div>
+    <>
+      <Hero />
+      <Pings />
 
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Shivam <span className="text-yellow-300">Kumar</span>
-            </h1>
+      <section className="border-y border-line py-5" aria-label="Technologies I work with">
+        <Marquee items={marqueeTech} itemClass="font-display text-2xl font-medium tracking-tight sm:text-3xl" />
+      </section>
 
-            {/* Marquee */}
-            <div className="mb-6 relative overflow-hidden h-10">
-              <div className="relative overflow-hidden h-8 md:h-10">
-                <div className="animate-slow-marquee whitespace-nowrap">
-                  <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
-                    🚀 Frontend Developer
-                  </span>
-                  <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
-                    📊 Data Analytics
-                  </span>
-                  <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
-                    🚀 MERN-Stack Developer
-                  </span>
-                  <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
-                    🌐 WordPress Developer
-                  </span>
-                  <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
-                    🐍 Python Developer
-                  </span>
-                  <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
-                    🌐 SQL Developer
-                  </span>
-                  <span className="inline-block mx-6 text-xl md:text-2xl font-semibold">
-                    🐍 Software Engineer
-                  </span>
-                </div>
-              </div>
-              <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-blue-600 to-transparent"></div>
-              <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-blue-600 to-transparent"></div>
-            </div>
+      <section className="shell py-24 sm:py-36">
+        <ScrollText text={profile.statement} className="font-display text-[clamp(2.1rem,5.8vw,5rem)] font-semibold leading-[1.04] tracking-[-0.04em]" />
+      </section>
 
-            <p className="text-lg md:text-xl mb-8 opacity-80 max-w-3xl mx-auto leading-relaxed">
-              Passionate about creating innovative software solutions and
-              leveraging communication, interpersonal, and technical skills to
-              build impactful projects.
-            </p>
+      <section className="shell pb-20 sm:pb-28" aria-label="Key numbers">
+        <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-line bg-line lg:grid-cols-5">
+          {heroStats.map((s, i) => (
+            <Reveal key={s.label} delay={i * 0.07} y={18} className={`flex flex-col-reverse justify-end bg-bg p-6 sm:p-7 ${i === 0 ? "col-span-2 lg:col-span-1" : ""}`}>
+              <dt className="mt-2 text-sm text-muted">{s.label}</dt>
+              <dd className="font-display text-5xl font-semibold tracking-[-0.04em] sm:text-6xl">
+                <CountUp value={s.value} decimals={s.decimals ?? 0} suffix={s.suffix} />
+              </dd>
+            </Reveal>
+          ))}
+        </dl>
+      </section>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={handleResumeDownload}
-                className="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:scale-105 transition flex items-center gap-2"
-              >
-                <Download size={20} /> Download Resume
-              </button>
-              <button
-                onClick={handleContactClick}
-                className="border-2 border-white px-6 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition flex items-center gap-2"
-              >
-                <MessageCircle size={20} /> Contact Me
-              </button>
-            </div>
-          </div>
+      <section className="shell py-16 sm:py-24">
+        <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
+          <SectionHead eyebrow="Selected work" title="Five products, built end to end" />
+          <Reveal y={12}>
+            <Button to="/projects" variant="ghost">All {projects.length} projects</Button>
+          </Reveal>
+        </div>
+        <ProjectStack />
+      </section>
+
+      <section className="bg-soft py-20 sm:py-28">
+        <div className="shell">
+          <SectionHead eyebrow="What I bring" title="What I bring to a team" className="mb-12" />
+          <Bento />
         </div>
       </section>
 
-      {/* About & Contact Section */}
-      <section className="py-16 md:py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* About Section */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-6">
-                Career Objective
-              </h2>
-              <div className="bg-gray-50 dark:bg-gray-900 rounded-2xl p-6 md:p-8 shadow-lg">
-                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                  To become a software developer and data analyst, leveraging my
-                  communication, interpersonal, and technical skills in a
-                  professional environment. I am passionate about creating
-                  innovative solutions, analyzing data to derive meaningful
-                  insights, and continuously learning new technologies to stay
-                  at the forefront of software development and data analytics.
-                </p>
-                <div className="grid grid-cols-2 gap-4 mt-8">
-                  {stats.map((stat, index) => (
-                    <div
-                      key={index}
-                      className="text-center bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md"
-                    >
-                      <stat.icon className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2" />
-                      <div className="text-2xl font-bold text-gray-800 dark:text-white">
-                        {stat.number}
-                      </div>
-                      <div className="text-sm text-gray-600 dark:text-gray-300">
-                        {stat.label}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+      <section className="shell py-24 sm:py-32">
+        <SectionHead eyebrow="How I work" title="Spec first, then ship" intro={profile.howIWork} className="mb-16" />
+        <ProcessDraw />
+      </section>
 
-            {/* Contact Information */}
-            <div id="contact-section">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-6">
-                Get In Touch
-              </h2>
-              <div className="bg-gray-50 dark:bg-gray-900 rounded-2xl p-6 md:p-8 shadow-lg">
-                <div className="space-y-4">
-                  {contactInfo.map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center gap-4 p-3 rounded-lg hover:bg-white dark:hover:bg-gray-800 transition-colors duration-200"
-                    >
-                      <div className="bg-blue-100 dark:bg-blue-900 p-2 rounded-lg">
-                        <item.icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                      </div>
-                      {item.link ? (
-                        <a
-                          href={item.link}
-                          target={
-                            item.link.startsWith("http") ? "_blank" : "_self"
-                          }
-                          rel="noopener noreferrer"
-                          className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 flex-1"
-                        >
-                          {item.text}
-                        </a>
-                      ) : (
-                        <span className="text-gray-700 dark:text-gray-300 flex-1">
-                          {item.text}
-                        </span>
-                      )}
-                    </div>
-                  ))}
-                </div>
+      <section className="shell grid gap-12 pb-24 sm:pb-32 lg:grid-cols-[1fr_1.7fr]">
+        <div className="lg:sticky lg:top-28 lg:self-start">
+          <SectionHead eyebrow="Experience" title="Where I've worked" />
+          <Reveal className="mt-7" y={12}>
+            <Button to="/about" variant="ghost">More about me</Button>
+          </Reveal>
+        </div>
+        <Timeline items={experience} render={(job) => <ExperienceCard job={job} />} />
+      </section>
 
-                {/* Quick Action Buttons */}
-                <div className="mt-8 grid grid-cols-2 gap-4">
-                  <a
-                    href="https://www.linkedin.com/in/15shivambgs"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg transition-colors duration-200 text-center font-medium flex items-center justify-center gap-2"
-                  >
-                    <Linkedin size={18} />
-                    LinkedIn
-                  </a>
-                  <a
-                    href="https://github.com/15shivamgit"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gray-800 hover:bg-gray-900 text-white py-3 px-4 rounded-lg transition-colors duration-200 text-center font-medium flex items-center justify-center gap-2"
-                  >
-                    <Github size={18} />
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+      <section className="bg-soft py-20 sm:py-28">
+        <div className="shell">
+          <SectionHead
+            eyebrow="From data to decisions"
+            title="Drag to see what the work actually does"
+            intro="The left side is the raw launches.csv. The right side is the Power BI dashboard I built from it in my Space Launch Analytics project."
+            className="mb-10"
+          />
+          <Reveal y={30}>
+            <BeforeAfter />
+          </Reveal>
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-blue-600 to-purple-700 dark:from-gray-800 dark:to-gray-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Start a Project?
-          </h2>
-          <p className="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Let&apos;s discuss how we can work together to bring your ideas to
-            life.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="mailto:15shivambgs@gmail.com"
-              className="bg-white text-blue-600 px-6 md:px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 flex items-center gap-2 shadow-lg"
-            >
-              <Mail size={20} />
-              Send Email
-            </a>
-            <a
-              href="tel:+917488881563"
-              className="border-2 border-white text-white px-6 md:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-200 flex items-center gap-2"
-            >
-              <Phone size={20} />
-              Call Now
-            </a>
-          </div>
-        </div>
+      <AchievementBand />
+
+      <section className="shell py-28 text-center sm:py-40">
+        <p className="eyebrow">Hiring for a Full Stack role?</p>
+        <SplitWords text="Let's talk about what you're building" as="h2" className="mx-auto mt-5 max-w-4xl text-[clamp(2.8rem,8vw,6.5rem)] font-bold leading-[0.95] tracking-[-0.05em]" />
+        <Reveal delay={0.25} y={14} className="mt-10 flex flex-wrap justify-center gap-3">
+          <Button to="/contact" variant="accent" icon={ArrowUpRight}>Get in touch</Button>
+          <Button href={`mailto:${profile.email}`} variant="ghost" icon={Mail}>Email me</Button>
+        </Reveal>
       </section>
-
-      <Footer />
-
-      {/* Animations */}
-      <style>{`
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(30px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in { animation: fade-in 1s ease-out; }
-
-        @keyframes slow-marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-slow-marquee {
-          animation: slow-marquee 25s linear infinite;
-          display: inline-block;
-        }
-      `}</style>
-    </div>
+    </>
   );
 }

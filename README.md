@@ -1,174 +1,45 @@
-# 📸 Website Screenshots
+# Shivam Kumar: Portfolio
 
-Example:
+Personal portfolio of Shivam Kumar, Full Stack Developer.
 
-- ![Home Page](./public/portfolio2.png)
+**Live site:** https://shivam-v1-sigma.vercel.app
 
-🚀 Portfolio & Achievements Website
+## Stack
 
-A modern, responsive personal portfolio & achievement showcase built using React.js and Tailwind CSS.
-This project highlights my projects, internships, certifications, and national-level achievements with a clean, professional UI.
+React 19, Vite, Tailwind CSS 4, Framer Motion, Lenis and React Router. Contact messages go through Web3Forms, so the site needs no backend.
 
-📌 Project Overview
+## Run locally
 
-This portfolio website is designed to present my technical journey and achievements in a structured and visually appealing way.
-It includes:
-
-🧑‍💻 Projects showcase
-
-🏆 Internship achievements
-
-📜 Certifications
-
-🏅 National-level competitions (GOER 2025, RMAT, etc.)
-
-The UI is inspired by modern SaaS dashboards with dark theme, cards, and smooth layouts.
-
-✨ Key Features
-
-⚛️ Built with React.js
-
-🎨 Styled using Tailwind CSS
-
-🌙 Dark theme professional UI
-
-📱 Fully responsive (Mobile, Tablet, Desktop)
-
-🏆 Dedicated Achievement Pages
-
-📜 Certificate & Internship details
-
-🔗 External links (GitHub, Live Projects, Certificates)
-
-🧩 Reusable components
-
-🚫 Inspect disable hook (basic protection)
-
-🏗️ Tech Stack
-| Technology | Usage |
-| --------------------- | ------------------ |
-| **React.js** | Frontend framework |
-| **Tailwind CSS** | Styling & UI |
-| **Lucide React** | Icons |
-| **JavaScript (ES6+)** | Logic |
-| **HTML5** | Structure |
-| **CSS3** | Styling |
-
-📂 Project Structure
-src/
-│── components/
-│ ├── Navbar.jsx
-│ ├── Footer.jsx
-│ ├── Layout.jsx
-│
-│── pages/
-│ ├── Projects.jsx
-│ ├── ProjectDetail.jsx
-│ ├── Certificates.jsx
-│ ├── InternshipAchievement.jsx
-│ ├── GOERAchievement.jsx
-│
-│── data/
-│ ├── projects.js
-│ ├── certificates.js
-│
-│── hooks/
-│ └── useDisableInspect.js
-│
-│── App.jsx
-│── main.jsx
-
-🏆 Major Achievements Highlighted
-🎯 GOER 2025 – National Level Competition
-
-Selected among Top 10 Universities in India
-
-Organized by Institute of Risk Management (IRM), India
-
-Final round held at SDA Bocconi Asia Center, Mumbai
-
-Team: Intrepid Explorers (MCA) – AKS University, Satna
-
-📊 RMAT – Risk Management Aptitude Test
-
-Score: 96% (240 / 250)
-
-Skills assessed:
-
-Business Logic
-
-Analytical Reasoning
-
-Decision Making
-
-Risk Thinking
-
-🧑‍💼 Internship Experience
-
-Data Analysis Intern – Shanti Infosoft, Indore
-
-Data Cleaning & Manipulating
-
-Get meaningfull insight
-
-Visualization
-
-Worked with modern tech stack
-
-Mentored & collaborated in a team environment
-
-📜 Certifications Section
-
-AWS Training (Anudip Foundation)
-
-Core Java Certification
-
-IBM / Microsoft / Forage Programs
-
-RMAT & GOER Participation Certificates
-
-Internship & Appreciation Certificates
-
-All certificates are displayed in a structured card-based UI.
-
-▶️ How to Run the Project Locally
-
-# Clone repository
-
-git clone https://github.com/15shivamgit/Portfolio_v1.git
-
-# Go to project directory
-
-cd your-portfolio
-
-# Install dependencies
-
+```bash
 npm install
-
-# Start development server
-
+cp .env.example .env   # add your Web3Forms access key
 npm run dev
+```
 
-🌐 Live Demo
+| Command           | What it does          |
+| ----------------- | --------------------- |
+| `npm run dev`     | Start the dev server  |
+| `npm run build`   | Production build      |
+| `npm run preview` | Preview the build     |
+| `npm run lint`    | Run ESLint            |
 
-🔗 Live Portfolio: https://portfolio-v1-8gktb982s-15shivamgits-projects.vercel.app/
+## Editing content
 
-📈 Future Improvements
+All content lives in `src/data`, so most updates need no component changes.
 
-🖼️ Certificate image slider
+| File                 | Holds                                                   |
+| -------------------- | ------------------------------------------------------- |
+| `profile.js`         | Name, links, stats, skills, education, live updates     |
+| `experience.js`      | Work history                                            |
+| `projects.js`        | Every project and its case study                        |
+| `certificates.js`    | Certificates, with files in `public/certificates`       |
 
-📊 Timeline-based achievements
+## Environment variables
 
-🧾 Downloadable resume section
+| Name                 | Purpose                                                                                        |
+| -------------------- | ---------------------------------------------------------------------------------------------- |
+| `VITE_WEB3FORMS_KEY` | Access key from [web3forms.com](https://web3forms.com). Add it in Vercel project settings too. |
 
-🔍 Advanced filters for projects
+## Accessibility
 
-🌐 SEO optimization
-
-🤝 Connect With Me
-
-GitHub: https://github.com/15shivamgit
-
-LinkedIn: (https://www.linkedin.com/in/15shivambgs/)
-
-Portfolio: (https://portfolio-v1-8gktb982s-15shivamgits-projects.vercel.app/)
+The site honours the system reduced-motion setting and supports keyboard navigation, including the certificate viewer and the before/after slider.
